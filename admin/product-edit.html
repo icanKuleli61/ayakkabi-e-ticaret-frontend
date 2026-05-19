@@ -1,0 +1,3202 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Male_Fashion Template">
+    <meta name="keywords" content="Male_Fashion, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Male-Fashion | Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+
+    <link rel="stylesheet" href="../css/font-awesome.min.css" type="text/css">
+
+    <link rel="stylesheet" href="../css/elegant-icons.css" type="text/css">
+
+    <link rel="stylesheet" href="../css/magnific-popup.css" type="text/css">
+
+    <link rel="stylesheet" href="../css/owl.carousel.min.css" type="text/css">
+
+    <link rel="stylesheet" href="../css/slicknav.min.css" type="text/css">
+
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+
+    <style>
+        .admin-page-header {
+
+            margin-bottom: 30px;
+        }
+
+        .admin-title {
+
+            font-size: 30px;
+
+            font-weight: 800;
+
+            color: #111;
+
+            margin-bottom: 8px;
+        }
+
+        .admin-subtitle {
+
+            color: #777;
+
+            margin: 0;
+
+            font-size: 15px;
+        }
+
+        .admin-create-btn {
+
+            height: 52px;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            padding: 0 24px;
+
+            background: #111;
+
+            color: #fff;
+
+            border-radius: 12px;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            transition: .2s;
+        }
+
+        .admin-create-btn:hover {
+
+            background: #000;
+
+            color: #fff;
+        }
+
+        .admin-card {
+
+            background: #fff;
+
+            border-radius: 18px;
+
+            padding: 24px;
+
+            box-shadow:
+                0 4px 20px rgba(0, 0, 0, .05);
+        }
+
+        .admin-input-group {
+
+            position: relative;
+        }
+
+        .admin-input-group i {
+
+            position: absolute;
+
+            top: 50%;
+
+            left: 16px;
+
+            transform: translateY(-50%);
+
+            color: #888;
+
+            font-size: 14px;
+        }
+
+        .admin-input {
+
+            height: 52px;
+
+            border-radius: 12px;
+
+            border: 1px solid #ececec;
+
+            padding-left: 45px;
+
+            font-size: 14px;
+
+            box-shadow: none;
+        }
+
+        .admin-input:focus {
+
+            border-color: #111;
+
+            box-shadow: none;
+        }
+
+        .admin-select {
+
+            height: 52px;
+
+            border-radius: 12px;
+
+            border: 1px solid #ececec;
+
+            box-shadow: none;
+
+            font-size: 14px;
+        }
+
+        .admin-select:focus {
+
+            border-color: #111;
+
+            box-shadow: none;
+        }
+
+        .admin-filter-btn {
+
+            width: 100%;
+
+            height: 52px;
+
+            border: none;
+
+            border-radius: 12px;
+
+            background: #111;
+
+            color: #fff;
+
+            font-size: 15px;
+
+            transition: .2s;
+        }
+
+        .admin-filter-btn:hover {
+
+            background: #000;
+        }
+
+        .admin-table {
+
+            margin: 0;
+        }
+
+        .admin-table thead tr {
+
+            background: #fafafa;
+        }
+
+        .admin-table th {
+
+            border: none;
+
+            padding: 18px;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            color: #111;
+
+            white-space: nowrap;
+        }
+
+        .admin-table td {
+
+            vertical-align: middle;
+
+            padding: 20px 18px;
+
+            border-top: 1px solid #f3f3f3;
+        }
+
+        .product-image-box {
+
+            width: 90px;
+
+            height: 90px;
+
+            border-radius: 16px;
+
+            overflow: hidden;
+
+            background: #f7f7f7;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+        }
+
+        .product-image-box img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: contain;
+        }
+
+        .product-name {
+
+            font-size: 15px;
+
+            font-weight: 700;
+
+            color: #111;
+
+            margin-bottom: 6px;
+        }
+
+        .product-slug {
+
+            font-size: 13px;
+
+            color: #888;
+        }
+
+        .variant-count {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-width: 42px;
+
+            height: 32px;
+
+            padding: 0 12px;
+
+            border-radius: 30px;
+
+            background: #f4f4f4;
+
+            font-size: 13px;
+
+            font-weight: 700;
+        }
+
+        .status-badge {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 8px 16px;
+
+            border-radius: 30px;
+
+            font-size: 12px;
+
+            font-weight: 800;
+        }
+
+        .status-active {
+
+            background: #e8fff1;
+
+            color: #16a34a;
+        }
+
+        .status-passive {
+
+            background: #fff0f0;
+
+            color: #dc2626;
+        }
+
+        .action-buttons {
+
+            display: flex;
+
+            justify-content: flex-end;
+
+            gap: 10px;
+        }
+
+        .action-btn {
+
+            width: 42px;
+
+            height: 42px;
+
+            border: none;
+
+            border-radius: 12px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            transition: .2s;
+
+            font-size: 15px;
+        }
+
+        .btn-edit {
+
+            background: #111;
+
+            color: #fff;
+        }
+
+        .btn-edit:hover {
+
+            background: #000;
+        }
+
+        .btn-status {
+
+            background: #fff4e5;
+
+            color: #f59e0b;
+        }
+
+        .btn-status:hover {
+
+            background: #f59e0b;
+
+            color: #fff;
+        }
+
+        .empty-product-area {
+
+            padding: 80px 20px;
+
+            text-align: center;
+        }
+
+        .empty-product-area img {
+
+            width: 90px;
+
+            opacity: .7;
+
+            margin-bottom: 20px;
+        }
+
+        .empty-product-area h4 {
+
+            font-size: 24px;
+
+            font-weight: 800;
+
+            margin-bottom: 10px;
+        }
+
+        .empty-product-area p {
+
+            color: #777;
+
+            margin: 0;
+        }
+
+        .pagination-area {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 10px;
+        }
+
+        .variant-card {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 20px;
+
+            border: 1px solid #eee;
+
+            border-radius: 18px;
+
+            margin-bottom: 18px;
+
+            cursor: pointer;
+
+            transition: .2s;
+        }
+
+        .variant-card:hover {
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 6px 18px rgba(0, 0, 0, .06);
+        }
+
+        .variant-image {
+
+            width: 90px;
+
+            height: 90px;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            background: #f7f7f7;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            margin-right: 18px;
+        }
+
+        .variant-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: contain;
+        }
+
+        .variant-content {
+
+            flex: 1;
+        }
+
+        .variant-content h4 {
+
+            font-size: 18px;
+
+            font-weight: 800;
+
+            margin-bottom: 6px;
+        }
+
+        .variant-content p {
+
+            margin: 0;
+
+            color: #777;
+        }
+
+        .variant-right span {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 10px 16px;
+
+            border-radius: 999px;
+
+            background: #f4f4f4;
+
+            font-weight: 700;
+        }
+
+        .modal-xl {
+
+            max-width: 1200px;
+        }
+
+        .modal-content {
+
+            border-radius: 24px;
+
+            border: none;
+        }
+
+        .modal-header {
+
+            padding: 28px 32px;
+
+            border-bottom: 1px solid #f3f3f3;
+        }
+
+        .modal-body {
+
+            padding: 32px;
+        }
+
+        .modal-footer {
+
+            padding: 24px 32px;
+
+            border-top: 1px solid #f3f3f3;
+        }
+
+        #variantImagesArea {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 14px;
+        }
+
+        #variantImagesArea img {
+
+            width: 100%;
+
+            height: 140px;
+
+            object-fit: cover;
+
+            border-radius: 18px;
+
+            border: 1px solid #eee;
+        }
+
+        #variantImagesArea {
+
+            max-height: 700px;
+
+            overflow-y: auto;
+
+            padding-right: 8px;
+        }
+
+        #variantSizesArea {
+
+            max-height: 500px;
+
+            overflow-y: auto;
+
+            padding-right: 8px;
+        }
+
+        .variant-size-box {
+
+            border: 1px solid #eee;
+
+            border-radius: 18px;
+
+            padding: 18px;
+
+            margin-bottom: 18px;
+        }
+
+        .form-text {
+
+            margin-top: 8px;
+
+            color: #888;
+
+            font-size: 13px;
+        }
+
+        .admin-card .form-control {
+
+            height: 54px;
+
+            border-radius: 14px;
+
+            border: 1px solid #ececec;
+
+            box-shadow: none;
+        }
+
+        .admin-card textarea.form-control {
+
+            height: auto;
+        }
+
+        .admin-card .form-control:focus {
+
+            border-color: #111;
+
+            box-shadow: none;
+        }
+
+        .variant-card-left {
+
+            display: flex;
+
+            align-items: center;
+        }
+
+        .variant-right {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Begin -->
+
+    <!-- Offcanvas Menu End -->
+
+
+    <!-- Header Section Begin -->
+    <!-- Header Section End -->
+
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-option">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb__text">
+                        <h4>Admin Panel</h4>
+                        <div class="breadcrumb__links">
+                            <a href="/admin/dashboard.html">Dashboard</a>
+                            <span>Dashboard</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End -->
+    <div id="profileLoader" style="
+        height:500px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size:22px;
+        font-weight:700;
+    ">
+
+        Yükleniyor...
+
+    </div>
+
+    <!-- About Section Begin -->
+    <section class="profile-section spad" id="profileContent" style="display:none;">
+
+        <div class="container">
+
+            <div class="row">
+
+                <!-- SOL MENU -->
+
+                <div class="col-lg-3">
+
+                    <div id="sidebar-container"></div>
+
+                </div>
+
+                <!-- SAĞ PANEL -->
+
+                <div class="col-lg-9">
+
+                    <div class="admin-card">
+
+                        <div class="mb-5">
+
+                            <h2 class="admin-title">
+                                Ürün Düzenle
+                            </h2>
+
+                            <p class="admin-subtitle">
+
+                                Ürün bilgilerini ve varyantlarını yönetebilirsiniz.
+
+                            </p>
+
+                        </div>
+
+                        <div class="row">
+
+                            <!-- PRODUCT NAME -->
+
+                            <div class="col-lg-6">
+
+                                <label>
+                                    Ürün Adı
+                                </label>
+
+                                <input type="text" id="productName" class="form-control">
+
+                            </div>
+
+                            <!-- GENDER -->
+
+                            <div class="col-lg-6">
+
+                                <label>
+                                    Cinsiyet
+                                </label>
+
+                                <select id="genderSelect" class="form-control">
+
+                                    <option value="male">
+                                        Erkek
+                                    </option>
+
+                                    <option value="female">
+                                        Kadın
+                                    </option>
+
+                                    <option value="unisex">
+                                        Unisex
+                                    </option>
+
+                                    <option value="kids">
+                                        Çocuk
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                            <!-- BRAND -->
+
+                            <div class="col-lg-6 mt-4">
+
+                                <label>
+                                    Marka
+                                </label>
+
+                                <select id="brandSelect" class="form-control">
+
+                                </select>
+
+
+                            </div>
+
+                            <!-- CATEGORY -->
+
+                            <div class="col-lg-6 mt-4">
+
+                                <label>
+                                    Kategori
+                                </label>
+
+                                <select id="categorySelect" class="form-control">
+
+                                </select>
+
+                            </div>
+
+                            <!-- DESCRIPTION -->
+
+                            <div class="col-lg-12 mt-4">
+
+                                <label>
+                                    Açıklama
+                                </label>
+
+                                <textarea id="productDescription" class="form-control" rows="5"></textarea>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- VARIANTS -->
+
+                    <div class="admin-card mt-4">
+
+                        <div class="
+            d-flex
+            justify-content-between
+            align-items-center
+            mb-4
+        ">
+
+                            <h3>
+
+                                Varyantlar
+
+                            </h3>
+
+                            <button class="site-btn" onclick="createVariant()">
+
+                                + Varyant Ekle
+
+                            </button>
+
+                        </div>
+
+                        <div id="variantsContainer">
+
+                        </div>
+
+
+
+                        <div class="text-right mt-4">
+
+                            <button class="site-btn" onclick="saveProduct()">
+
+                                ÜRÜNÜ GÜNCELLE
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- About Section End -->
+
+    <!-- Testimonial Section Begin -->
+
+    <!-- Testimonial Section End -->
+
+    <!-- Counter Section Begin -->
+
+    <!-- Counter Section End -->
+
+    <!-- Team Section Begin -->
+
+
+    <!-- Team Section End -->
+
+    <!-- Client Section Begin -->
+
+
+    <!-- Client Section End -->
+
+    <!-- Footer Section Begin -->
+
+    <!-- Footer Section End -->
+
+    <!-- Search Begin -->
+
+    <!-- Search End -->
+
+    <!-- Js Plugins -->
+    <script src="../js/jquery-3.3.1.min.js"></script>
+
+    <script src="../js/bootstrap.min.js"></script>
+
+
+    <script src="../js/jquery.magnific-popup.min.js"></script>
+
+    <script src="../js/jquery.countdown.min.js"></script>
+
+    <script src="../js/jquery.slicknav.js"></script>
+
+    <script src="../js/mixitup.min.js"></script>
+
+    <script src="../js/owl.carousel.min.js"></script>
+
+    <script src="../js/main.js"></script>
+
+
+
+
+    <script>
+
+        const currentPage =
+            "products";
+
+
+
+        let product = null;
+
+        let brands = [];
+
+        let categories = [];
+
+        let colors = [];
+
+        let currentVariant = null;
+
+        let deletedVariants = [];
+
+        let deletedImages = [];
+
+        let deletedSizes = [];
+
+        let selectedImages = [];
+
+
+        const urlParams =
+            new URLSearchParams(
+                window.location.search
+            );
+
+
+
+        const productId =
+            urlParams.get("id");
+
+
+
+        async function loadSidebar() {
+
+            const response =
+                await fetch(
+                    "./sidebar.html"
+                );
+
+
+
+            const html =
+                await response.text();
+
+
+
+            document.getElementById(
+                "sidebar-container"
+            ).innerHTML = html;
+
+
+
+            const sidebarLinks =
+
+                document.querySelectorAll(
+                    ".sidebar-link"
+                );
+
+
+
+            sidebarLinks.forEach(link => {
+
+                if (
+                    link.dataset.page ===
+                    currentPage
+                ) {
+
+                    link.classList.add(
+                        "active"
+                    );
+                }
+            });
+        }
+
+
+
+        async function loadBrands() {
+
+            try {
+
+                const response =
+
+                    await fetch(
+                        "http://127.0.0.1:8000/api/brands"
+                    );
+
+
+
+                const data =
+                    await response.json();
+
+
+
+                brands = data.data ?? [];
+
+
+
+                const select =
+
+                    document.getElementById(
+                        "brandSelect"
+                    );
+
+
+
+                select.innerHTML = `
+
+            <option value="">
+                Marka Seç
+            </option>
+            `;
+
+
+
+                brands.forEach(brand => {
+
+                    select.innerHTML += `
+
+                <option value="${brand.id}">
+
+                    ${brand.name}
+
+                </option>
+                `;
+                });
+
+            } catch (error) {
+
+                console.log(error);
+            }
+        }
+
+
+
+        async function loadCategories() {
+
+            try {
+
+                const response =
+
+                    await fetch(
+                        "http://127.0.0.1:8000/api/categories"
+                    );
+
+
+
+                const data =
+                    await response.json();
+
+
+
+                categories = data.data ?? [];
+
+
+
+                const select =
+
+                    document.getElementById(
+                        "categorySelect"
+                    );
+
+
+
+                select.innerHTML = `
+
+            <option value="">
+                Kategori Seç
+            </option>
+            `;
+
+
+
+                categories.forEach(category => {
+
+                    select.innerHTML += `
+
+                <option value="${category.id}">
+
+                    ${category.name}
+
+                </option>
+                `;
+                });
+
+            } catch (error) {
+
+                console.log(error);
+            }
+        }
+
+
+
+        async function loadColors() {
+
+            try {
+
+                const response =
+
+                    await fetch(
+                        "http://127.0.0.1:8000/api/colors"
+                    );
+
+
+
+                const data =
+                    await response.json();
+
+
+
+                colors = data.data ?? [];
+
+
+
+                const select =
+
+                    document.getElementById(
+                        "variantColorSelect"
+                    );
+
+
+
+                select.innerHTML = `
+
+            <option value="">
+                Renk Seç
+            </option>
+            `;
+
+
+
+                colors.forEach(color => {
+
+                    select.innerHTML += `
+
+                <option value="${color.id}">
+
+                    ${color.name}
+
+                </option>
+                `;
+                });
+
+            } catch (error) {
+
+                console.log(error);
+            }
+        }
+
+
+
+        let originalProduct = null;
+
+
+
+        async function loadProduct() {
+
+            try {
+
+                const token =
+
+                    localStorage.getItem(
+                        "admin_token"
+                    );
+
+
+
+                if (!token) {
+
+                    window.location.href =
+                        "../login.html";
+
+                    return;
+                }
+
+
+
+                const response =
+
+                    await fetch(
+
+                        `http://127.0.0.1:8000/api/admin/products/${productId}`,
+
+                        {
+
+                            headers: {
+
+                                Accept:
+                                    "application/json",
+
+                                Authorization:
+                                    `Bearer ${token}`
+                            }
+                        }
+                    );
+
+
+
+                const data =
+                    await response.json();
+
+
+
+                product = data.data;
+
+                fillProductFields();
+
+                originalProduct =
+                    JSON.stringify(
+                        getCurrentPayload()
+                    );
+
+
+                renderVariants();
+
+                document.getElementById(
+                    "profileLoader"
+                ).style.display = "none";
+
+
+
+                document.getElementById(
+                    "profileContent"
+                ).style.display = "block";
+
+
+
+            } catch (error) {
+
+                console.log(error);
+
+                alert(
+                    "Ürün yüklenemedi"
+                );
+            }
+        }
+
+
+
+        function normalizeVariants(variants) {
+
+            return variants.map(variant => {
+
+                return {
+
+                    id:
+                        variant.id ?? null,
+
+                    name:
+                        variant.name,
+
+                    color_id:
+                        variant.color_id,
+
+                    sizes:
+                        variant.sizes.map(size => ({
+
+                            id:
+                                size.id ?? null,
+
+                            size:
+                                size.size,
+
+                            stock:
+                                size.stock,
+
+                            price:
+                                size.price
+                        })),
+
+                    images:
+                        variant.images.map(
+
+                            (image, index) => ({
+
+                                id:
+                                    image.id ?? null,
+
+                                url:
+
+                                    image.url
+                                        ? image.url
+                                        : image.preview,
+
+                                is_main:
+                                    index === 0
+                            })
+                        )
+                };
+            });
+        }
+
+
+        function fillProductFields() {
+
+            document.getElementById(
+                "productName"
+            ).value =
+                product.name ?? "";
+
+
+
+            document.getElementById(
+                "productDescription"
+            ).value =
+                product.description ?? "";
+
+
+
+            document.getElementById(
+                "categorySelect"
+            ).value =
+                product.category_id ?? "";
+
+
+
+            document.getElementById(
+                "brandSelect"
+            ).value =
+                product.brand_id ?? "";
+
+
+
+            document.getElementById(
+                "genderSelect"
+            ).value =
+                product.gender ?? "";
+        }
+
+
+
+        function renderVariants() {
+
+            const container =
+
+                document.getElementById(
+                    "variantsContainer"
+                );
+
+
+
+            container.innerHTML = "";
+
+
+
+            if (
+                !product.variants ||
+                product.variants.length === 0
+            ) {
+
+                container.innerHTML = `
+
+            <div class="empty-variant-area">
+
+                <h5>
+                    Henüz varyant yok
+                </h5>
+
+            </div>
+            `;
+
+                return;
+            }
+
+
+
+            product.variants.forEach(variant => {
+
+                container.innerHTML += `
+
+            <div
+                class="variant-card"
+
+                onclick="
+                    openVariantEditModal(
+                        ${variant.id}
+                    )
+                "
+            >
+
+                <div class="variant-card-left">
+
+                    <div class="variant-image">
+
+                        <img
+                            src="
+                            ${variant.images?.[0]?.url
+
+                        ?
+
+                        variant.images[0].url
+
+                        :
+
+                        '../img/no-image.png'
+                    }
+                            "
+                            alt=""
+                        >
+
+                    </div>
+
+
+
+                    <div class="variant-content">
+
+                        <h4>
+
+                            ${variant.name}
+
+                        </h4>
+
+                        <p>
+
+                            ${variant.color ?? '-'}
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="variant-right">
+
+    <span>
+
+       ${variant.sizes
+
+                        ?.sort((a, b) => a.size - b.size)
+
+                        ?.map(size => size.size)
+
+                        ?.join(" • ")
+                    }
+
+    </span>
+
+
+
+    <button
+
+        class="action-btn btn-status"
+
+        onclick="
+            deleteVariant(
+                event,
+                ${variant.id}
+            )
+        "
+    >
+
+        <i class="fa fa-trash"></i>
+
+    </button>
+                </div>
+
+            </div>
+            `;
+            });
+        }
+
+
+
+        function openVariantEditModal(
+            variantId
+        ) {
+
+            const variant =
+
+                product.variants.find(
+
+                    item =>
+                        item.id === variantId
+                );
+
+
+
+            if (!variant) {
+
+                return;
+            }
+
+
+
+            currentVariant =
+                variant;
+
+
+
+            document.getElementById(
+                "variantNameInput"
+            ).value =
+                variant.name ?? "";
+
+
+
+            document.getElementById(
+                "variantColorSelect"
+            ).value =
+                variant.color_id ?? "";
+
+
+
+            renderVariantSizes(
+                variant.sizes ?? []
+            );
+
+
+
+            selectedImages =
+                variant.images ?? [];
+
+
+
+            renderVariantImages();
+
+
+
+            $("#variantModal").modal(
+                "show"
+            );
+        }
+
+
+
+        function renderVariantSizes(
+            sizes
+        ) {
+
+            const container =
+
+                document.getElementById(
+                    "variantSizesArea"
+                );
+
+
+
+            container.innerHTML = "";
+
+
+
+            sizes.forEach(size => {
+
+                container.innerHTML += `
+
+            <div
+    class="variant-size-box"
+    data-id="${size.id ?? ''}"
+>
+
+                <div class="row">
+
+                    <div class="col-lg-4">
+
+                        <label>
+                            Numara
+                        </label>
+
+                        <input
+                            type="number"
+                            class="form-control"
+                            value="${size.size}"
+                        >
+
+                    </div>
+
+                    <div class="col-lg-4">
+
+                        <label>
+                            Stok
+                        </label>
+
+                        <input
+                            type="number"
+                            class="form-control"
+                            value="${size.stock}"
+                        >
+
+                    </div>
+
+                    <div class="col-lg-4">
+
+                        <label>
+                            Fiyat
+                        </label>
+
+                        <input
+                            type="number"
+                            class="form-control"
+                            value="${size.price}"
+                        >
+
+                    </div>
+
+                    <div class="col-lg-12 mt-3 text-right">
+
+    <button
+
+        type="button"
+
+        class="action-btn btn-status"
+
+        onclick="
+            removeSizeInput(
+                this
+            )
+        "
+    >
+
+        <i class="fa fa-trash"></i>
+
+    </button>
+
+</div>
+
+                </div>
+
+            </div>
+            `;
+            });
+        }
+
+
+
+        function renderVariantImages() {
+
+            const container =
+
+                document.getElementById(
+                    "variantImagesArea"
+                );
+
+
+
+            container.innerHTML = "";
+
+
+
+            if (selectedImages.length === 0) {
+
+                container.innerHTML = `
+
+        <div style="
+            width:100%;
+            padding:50px;
+            border:2px dashed #e5e7eb;
+            border-radius:20px;
+            text-align:center;
+            background:#fafafa;
+            color:#999;
+            font-size:15px;
+            font-weight:600;
+        ">
+
+            Henüz fotoğraf eklenmedi
+
+        </div>
+        `;
+
+                return;
+            }
+
+
+
+            selectedImages.forEach(
+                (image, index) => {
+
+                    const imageUrl =
+
+                        image.url
+                            ? image.url
+                            : image.preview;
+
+
+                    container.innerHTML += `
+
+            <div style="
+                width:130px;
+            ">
+
+                <div style="
+                    position:relative;
+                    border-radius:20px;
+                    overflow:hidden;
+                    background:#fff;
+                    border:1px solid #eee;
+                    box-shadow:0 4px 18px rgba(0,0,0,.05);
+                ">
+
+                    <img
+                        src="${imageUrl}"
+                        style="
+                            width:100%;
+                            height:180px;
+                            object-fit:cover;
+                            display:block;
+                        "
+                    >
+
+                    <button
+
+                        type="button"
+
+                        onclick="
+                            removeVariantImage(
+                                ${index}
+                            )
+                        "
+
+                        style="
+                            position:absolute;
+                            bottom:0;
+                            left:0;
+                            width:100%;
+                            height:52px;
+                            border:none;
+                            background:#dc5b43;
+                            color:#fff;
+                            font-size:15px;
+                            font-weight:700;
+                            cursor:pointer;
+                        "
+                    >
+
+                        Sil
+
+                    </button>
+
+                </div>
+
+            </div>
+            `;
+                }
+            );
+        }
+
+
+        function removeVariantImage(index) {
+
+            const image =
+                selectedImages[index];
+
+
+
+            if (
+                image &&
+                image.id
+            ) {
+
+                deletedImages.push(
+                    image.id
+                );
+            }
+
+
+
+            selectedImages.splice(
+                index,
+                1
+            );
+
+
+
+            renderVariantImages();
+        }
+
+
+
+        function createVariant() {
+
+            currentVariant = {
+
+                id: null,
+
+                name: "",
+
+                color_id: "",
+
+                color: "",
+
+                images: [],
+
+                sizes: []
+            };
+            selectedImages = [];
+
+            deletedImages = [];
+
+            document.getElementById(
+                "variantNameInput"
+            ).value = "";
+
+
+
+            document.getElementById(
+                "variantColorSelect"
+            ).value = "";
+
+
+
+            document.getElementById(
+                "variantSizesArea"
+            ).innerHTML = "";
+
+
+
+            renderVariantImages();
+
+
+
+            document.getElementById(
+                "variantImagesInput"
+            ).value = "";
+
+
+
+            $("#variantModal").modal(
+                "show"
+            );
+        }
+
+        function addSizeInput() {
+
+            const container =
+
+                document.getElementById(
+                    "variantSizesArea"
+                );
+
+
+
+            container.innerHTML += `
+
+    <div class="variant-size-box admin-card mb-3">
+
+        <div class="row">
+
+            <div class="col-lg-3">
+
+                <label>
+                    Numara
+                </label>
+
+                <input
+                    type="number"
+                    class="form-control"
+                    placeholder="42"
+                >
+
+            </div>
+
+            <div class="col-lg-3">
+
+                <label>
+                    Stok
+                </label>
+
+                <input
+                    type="number"
+                    class="form-control"
+                    placeholder="10"
+                >
+
+            </div>
+
+            <div class="col-lg-3">
+
+                <label>
+                    Fiyat
+                </label>
+
+                <input
+                    type="number"
+                    class="form-control"
+                    placeholder="3999"
+                >
+
+            </div>
+
+            <div class="col-lg-3 d-flex align-items-end">
+
+                <button
+
+                    type="button"
+
+                    class="action-btn btn-status"
+
+                    onclick="
+                        removeSizeInput(this)
+                    "
+
+                    style="
+                        width:100%;
+                        height:54px;
+                    "
+                >
+
+                    <i class="fa fa-trash"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+    `;
+        }
+
+        async function saveProduct() {
+
+            const button =
+
+                document.querySelector(
+                    '.site-btn[onclick="saveProduct()"]'
+                );
+
+
+
+            let oldButtonText = "";
+
+
+
+            try {
+
+                const token =
+
+                    localStorage.getItem(
+                        "admin_token"
+                    );
+
+
+
+                if (!token) {
+
+                    alert(
+                        "Oturum bulunamadı"
+                    );
+
+                    window.location.href =
+                        "../login.html";
+
+                    return;
+                }
+
+
+
+                /*
+                |--------------------------------------------------------------------------
+                | FORM DATA
+                |--------------------------------------------------------------------------
+                */
+
+                const formData =
+                    new FormData();
+
+
+
+                const productName =
+
+                    document.getElementById(
+                        "productName"
+                    ).value.trim();
+
+
+
+                const description =
+
+                    document.getElementById(
+                        "productDescription"
+                    ).value.trim();
+
+
+
+                const categoryId =
+
+                    document.getElementById(
+                        "categorySelect"
+                    ).value;
+
+
+
+                const brandId =
+
+                    document.getElementById(
+                        "brandSelect"
+                    ).value;
+
+
+
+                const gender =
+
+                    document.getElementById(
+                        "genderSelect"
+                    ).value;
+
+
+
+                /*
+                |--------------------------------------------------------------------------
+                | VALIDATION
+                |--------------------------------------------------------------------------
+                */
+
+                if (!productName) {
+
+                    alert(
+                        "Ürün adı gerekli"
+                    );
+
+                    return;
+                }
+
+
+
+                if (!description) {
+
+                    alert(
+                        "Açıklama gerekli"
+                    );
+
+                    return;
+                }
+
+
+
+                if (!categoryId) {
+
+                    alert(
+                        "Kategori seçmelisiniz"
+                    );
+
+                    return;
+                }
+
+
+
+                if (!brandId) {
+
+                    alert(
+                        "Marka seçmelisiniz"
+                    );
+
+                    return;
+                }
+
+
+
+                if (!gender) {
+
+                    alert(
+                        "Cinsiyet seçmelisiniz"
+                    );
+
+                    return;
+                }
+
+
+
+                if (
+
+                    !product.variants ||
+
+                    product.variants.length === 0
+
+                ) {
+
+                    alert(
+                        "En az 1 varyant gerekli"
+                    );
+
+                    return;
+                }
+
+
+
+                /*
+                |--------------------------------------------------------------------------
+                | PRODUCT
+                |--------------------------------------------------------------------------
+                */
+
+                formData.append(
+                    "name",
+                    productName
+                );
+
+
+
+                formData.append(
+                    "description",
+                    description
+                );
+
+
+
+                formData.append(
+                    "category_id",
+                    categoryId
+                );
+
+
+
+                formData.append(
+                    "brand_id",
+                    brandId
+                );
+
+
+
+                formData.append(
+                    "gender",
+                    gender
+                );
+
+
+
+                /*
+                |--------------------------------------------------------------------------
+                | VARIANTS
+                |--------------------------------------------------------------------------
+                */
+
+                product.variants.forEach(
+
+                    (
+                        variant,
+                        variantIndex
+                    ) => {
+
+                        if (!variant.name) {
+
+                            throw new Error(
+                                `${variantIndex + 1}. varyant adı eksik`
+                            );
+                        }
+
+
+
+                        if (!variant.color_id) {
+
+                            throw new Error(
+                                `${variantIndex + 1}. varyantta renk seçilmemiş`
+                            );
+                        }
+
+
+
+                        if (
+
+                            !variant.images ||
+
+                            variant.images.length === 0
+
+                        ) {
+
+                            throw new Error(
+                                `${variant.name} varyantında fotoğraf yok`
+                            );
+                        }
+
+
+
+                        if (
+
+                            !variant.sizes ||
+
+                            variant.sizes.length === 0
+
+                        ) {
+
+                            throw new Error(
+                                `${variant.name} varyantında numara yok`
+                            );
+                        }
+
+
+
+                        /*
+                        |--------------------------------------------------------------------------
+                        | VARIANT INFO
+                        |--------------------------------------------------------------------------
+                        */
+
+                        if (variant.id) {
+
+                            formData.append(
+
+                                `variants[${variantIndex}][id]`,
+
+                                variant.id
+                            );
+                        }
+
+
+
+                        formData.append(
+
+                            `variants[${variantIndex}][name]`,
+
+                            variant.name
+                        );
+
+
+
+                        formData.append(
+
+                            `variants[${variantIndex}][color_id]`,
+
+                            variant.color_id
+                        );
+
+
+
+                        /*
+                        |--------------------------------------------------------------------------
+                        | SIZES
+                        |--------------------------------------------------------------------------
+                        */
+
+                        variant.sizes.forEach(
+
+                            (
+                                size,
+                                sizeIndex
+                            ) => {
+
+                                if (
+
+                                    !size.size ||
+
+                                    isNaN(size.stock) ||
+
+                                    size.stock < 0 ||
+
+                                    isNaN(size.price) ||
+
+                                    size.price <= 0
+
+                                ) {
+
+                                    throw new Error(
+                                        `${variant.name} varyantında numara bilgileri eksik`
+                                    );
+                                }
+
+
+
+                                if (size.id) {
+
+                                    formData.append(
+
+                                        `variants[${variantIndex}][sizes][${sizeIndex}][id]`,
+
+                                        size.id
+                                    );
+                                }
+
+
+
+                                formData.append(
+
+                                    `variants[${variantIndex}][sizes][${sizeIndex}][size]`,
+
+                                    size.size
+                                );
+
+
+
+                                formData.append(
+
+                                    `variants[${variantIndex}][sizes][${sizeIndex}][stock]`,
+
+                                    size.stock
+                                );
+
+
+
+                                formData.append(
+
+                                    `variants[${variantIndex}][sizes][${sizeIndex}][price]`,
+
+                                    size.price
+                                );
+                            }
+                        );
+
+
+
+                        /*
+                        |--------------------------------------------------------------------------
+                        | IMAGES
+                        |--------------------------------------------------------------------------
+                        */
+
+                        variant.images.forEach(
+
+                            (
+                                image,
+                                imageIndex
+                            ) => {
+
+                                /*
+                                |--------------------------------------------------------------------------
+                                | EXISTING IMAGE
+                                |--------------------------------------------------------------------------
+                                */
+
+                                if (image.id) {
+
+                                    formData.append(
+
+                                        `variants[${variantIndex}][images][${imageIndex}][id]`,
+
+                                        image.id
+                                    );
+
+
+
+                                    formData.append(
+
+                                        `variants[${variantIndex}][images][${imageIndex}][is_main]`,
+
+                                        imageIndex === 0
+                                            ? 1
+                                            : 0
+                                    );
+
+                                    return;
+                                }
+
+
+
+                                /*
+                                |--------------------------------------------------------------------------
+                                | NEW IMAGE
+                                |--------------------------------------------------------------------------
+                                */
+
+                                if (image.file) {
+
+                                    formData.append(
+
+                                        `variants[${variantIndex}][images][${imageIndex}][file]`,
+
+                                        image.file
+                                    );
+
+
+
+                                    formData.append(
+
+                                        `variants[${variantIndex}][images][${imageIndex}][is_main]`,
+
+                                        imageIndex === 0
+                                            ? 1
+                                            : 0
+                                    );
+                                }
+                            }
+                        );
+                    }
+                );
+
+
+
+                /*
+                |--------------------------------------------------------------------------
+                | DELETES
+                |--------------------------------------------------------------------------
+                */
+
+                deletedVariants.forEach(
+
+                    (id, index) => {
+
+                        formData.append(
+
+                            `deleted_variants[${index}]`,
+
+                            id
+                        );
+                    }
+                );
+
+
+
+                deletedImages.forEach(
+
+                    (id, index) => {
+
+                        formData.append(
+
+                            `deleted_images[${index}]`,
+
+                            id
+                        );
+                    }
+                );
+
+
+
+                deletedSizes.forEach(
+
+                    (id, index) => {
+
+                        formData.append(
+
+                            `deleted_sizes[${index}]`,
+
+                            id
+                        );
+                    }
+                );
+
+
+
+                /*
+                |--------------------------------------------------------------------------
+                | BUTTON
+                |--------------------------------------------------------------------------
+                */
+
+                if (button) {
+
+                    oldButtonText =
+                        button.innerHTML;
+
+                    button.disabled = true;
+
+                    button.innerHTML =
+                        "Güncelleniyor...";
+                }
+
+
+
+                /*
+                |--------------------------------------------------------------------------
+                | REQUEST
+                |--------------------------------------------------------------------------
+                */
+
+                const response =
+
+                    await fetch(
+
+                        `http://127.0.0.1:8000/api/admin/products/${productId}/full-update`,
+
+                        {
+
+                            method: "POST",
+
+                            headers: {
+
+                                Accept:
+                                    "application/json",
+
+                                Authorization:
+                                    `Bearer ${token}`
+                            },
+
+                            body:
+                                (() => {
+
+                                    formData.append(
+                                        "_method",
+                                        "PATCH"
+                                    );
+
+                                    return formData;
+
+                                })()
+                        }
+                    );
+
+
+
+                const data =
+                    await response.json();
+
+
+
+                console.log(data);
+
+
+
+                /*
+                |--------------------------------------------------------------------------
+                | ERROR
+                |--------------------------------------------------------------------------
+                */
+
+                if (!response.ok) {
+
+                    let errorMessage =
+                        "Güncelleme başarısız";
+
+
+
+                    if (data.message) {
+
+                        errorMessage =
+                            data.message;
+                    }
+
+
+
+                    if (data.errors) {
+
+                        const firstError =
+
+                            Object.values(
+                                data.errors
+                            )[0];
+
+
+
+                        if (
+
+                            Array.isArray(
+                                firstError
+                            )
+
+                        ) {
+
+                            errorMessage =
+                                firstError[0];
+                        }
+                    }
+
+                    alert(errorMessage);
+
+                    return;
+                }
+
+                deletedVariants = [];
+
+                deletedImages = [];
+
+                deletedSizes = [];
+
+
+
+                originalProduct =
+                    JSON.stringify(
+                        getCurrentPayload()
+                    );
+
+
+
+                alert(
+                    "Ürün güncellendi"
+                );
+
+                await loadProduct();
+
+            } catch (error) {
+
+                console.log(error);
+
+                alert(
+                    error.message ||
+                    "Bir hata oluştu"
+                );
+
+            } finally {
+
+                if (button) {
+
+                    button.disabled = false;
+
+                    button.innerHTML =
+                        oldButtonText ||
+                        "ÜRÜNÜ GÜNCELLE";
+                }
+            }
+        }
+
+
+        async function initPage() {
+
+            await loadSidebar();
+
+            await loadBrands();
+
+            await loadCategories();
+
+            await loadColors();
+
+            await loadProduct();
+        }
+
+        function saveVariantChanges() {
+
+            try {
+
+                const variantName =
+
+                    document.getElementById(
+                        "variantNameInput"
+                    ).value.trim();
+
+
+
+                const colorId =
+
+                    document.getElementById(
+                        "variantColorSelect"
+                    ).value;
+
+
+                if (!variantName) {
+
+                    alert(
+                        "Varyant adı gerekli"
+                    );
+
+                    return;
+                }
+
+
+
+                if (!colorId) {
+
+                    alert(
+                        "Renk seçmelisiniz"
+                    );
+
+                    return;
+                }
+
+
+
+                if (selectedImages.length === 0) {
+
+                    alert(
+                        "En az 1 fotoğraf eklemelisiniz"
+                    );
+
+                    return;
+                }
+
+
+
+                const selectedColor =
+
+                    colors.find(
+
+                        color =>
+                            color.id == colorId
+                    );
+
+
+
+                const sizeBoxes =
+
+                    document.querySelectorAll(
+                        ".variant-size-box"
+                    );
+
+
+
+                if (sizeBoxes.length === 0) {
+
+                    alert(
+                        "En az 1 numara eklemelisiniz"
+                    );
+
+                    return;
+                }
+
+
+
+                const sizes = [];
+
+                let hasError = false;
+
+                sizeBoxes.forEach(box => {
+
+                    const inputs =
+
+                        box.querySelectorAll(
+                            "input"
+                        );
+
+
+
+                    const size =
+
+                        parseInt(
+                            inputs[0].value
+                        );
+
+
+
+                    const stock =
+
+                        parseInt(
+                            inputs[1].value
+                        );
+
+
+
+                    const price =
+
+                        parseFloat(
+                            inputs[2].value
+                        );
+
+
+
+                    if (
+
+                        !size ||
+
+                        stock < 0 ||
+
+                        isNaN(stock) ||
+
+                        !price ||
+
+                        price <= 0
+
+                    ) {
+
+                        alert(
+                            "Numara alanları eksik"
+                        );
+
+                        hasError = true;
+
+                        return;
+                    }
+
+                    const duplicateSize =
+
+                        sizes.find(
+
+                            item =>
+                                item.size === size
+                        );
+
+
+
+                    if (duplicateSize) {
+
+                        alert(
+                            `${size} numarası zaten eklenmiş`
+                        );
+
+                        hasError = true;
+
+                        return;
+                    }
+
+                    sizes.push({
+
+                        id:
+                            box.dataset.id
+                                ? parseInt(box.dataset.id)
+                                : null,
+
+                        size,
+
+                        stock,
+
+                        price
+                    });
+                });
+                if (hasError) {
+
+                    return;
+                }
+
+
+                if (currentVariant && currentVariant.id) {
+
+                    currentVariant.name =
+                        variantName;
+
+
+
+                    currentVariant.color_id =
+                        parseInt(colorId);
+
+
+
+                    currentVariant.color =
+                        selectedColor?.name ?? "";
+
+
+
+                    currentVariant.images =
+                        selectedImages;
+
+
+
+                    currentVariant.sizes =
+                        sizes;
+
+                }
+
+                else {
+
+                    product.variants.push({
+
+                        name: variantName,
+
+                        color_id:
+                            parseInt(colorId),
+
+                        color:
+                            selectedColor?.name ?? "",
+
+                        images:
+                            selectedImages,
+
+                        sizes
+                    });
+                }
+
+
+                renderVariants();
+
+
+                $("#variantModal").modal(
+                    "hide"
+                );
+
+
+                currentVariant = null;
+
+
+
+                selectedImages = [];
+
+
+
+                document.getElementById(
+                    "variantImagesInput"
+                ).value = "";
+
+
+
+                document.getElementById(
+                    "variantImagesArea"
+                ).innerHTML = "";
+
+
+
+                document.getElementById(
+                    "variantSizesArea"
+                ).innerHTML = "";
+
+
+
+            } catch (error) {
+
+                alert(
+                    error.message ||
+                    "Bir hata oluştu"
+                );
+            }
+        }
+
+        function getCurrentPayload() {
+
+            return {
+
+                name:
+                    document.getElementById(
+                        "productName"
+                    ).value.trim(),
+
+                description:
+                    document.getElementById(
+                        "productDescription"
+                    ).value.trim(),
+
+                category_id:
+                    Number(
+                        document.getElementById(
+                            "categorySelect"
+                        ).value
+                    ) || null,
+
+                brand_id:
+                    Number(
+                        document.getElementById(
+                            "brandSelect"
+                        ).value
+                    ) || null,
+
+                gender:
+                    document.getElementById(
+                        "genderSelect"
+                    ).value,
+
+                variants:
+                    normalizeVariants(
+                        product.variants
+                    )
+            };
+        }
+
+        function deleteVariant(
+            event,
+            variantId
+        ) {
+
+            event.stopPropagation();
+
+
+
+            const confirmed = confirm(
+                "Varyant silinsin mi?"
+            );
+
+
+
+            if (!confirmed) {
+
+                return;
+            }
+
+
+
+            const variant =
+
+                product.variants.find(
+
+                    item =>
+                        item.id === variantId
+                );
+
+
+
+            if (
+                variant &&
+                variant.id
+            ) {
+
+                deletedVariants.push(
+                    variant.id
+                );
+            }
+
+
+
+            product.variants =
+
+                product.variants.filter(
+
+                    item =>
+                        item.id !== variantId
+                );
+
+
+
+            renderVariants();
+        }
+
+
+        function removeSizeInput(
+            button
+        ) {
+
+            const sizeBox =
+
+                button.closest(
+                    ".variant-size-box"
+                );
+
+
+
+            if (!sizeBox) {
+
+                return;
+            }
+
+
+
+            const sizeId =
+                sizeBox.dataset.id;
+
+
+
+            if (sizeId) {
+
+                deletedSizes.push(
+                    parseInt(sizeId)
+                );
+            }
+
+
+
+            sizeBox.remove();
+        }
+
+
+
+        function handleVariantImages(event) {
+
+            const files =
+
+                Array.from(
+                    event.target.files
+                );
+
+
+
+            const formattedImages =
+
+                files.map(file => ({
+
+                    file,
+                    preview:
+                        URL.createObjectURL(file)
+                }));
+
+
+
+            selectedImages = [
+
+                ...selectedImages,
+
+                ...formattedImages
+            ];
+
+
+
+            renderVariantImages();
+        }
+
+
+        initPage();
+
+    </script>
+
+
+
+    <div class="modal fade" id="variantModal" tabindex="-1">
+
+        <div class="modal-dialog modal-xl">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+
+                        Varyant Düzenle
+
+                    </h5>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+                        <span>
+                            &times;
+                        </span>
+
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+
+                    <div class="row">
+
+
+                        <div class="col-lg-6">
+
+                            <div class="form-group">
+
+                                <label>
+                                    Varyant Adı
+                                </label>
+
+                                <input type="text" id="variantNameInput" class="form-control"
+                                    placeholder="Siyah Variantı">
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-6">
+
+                            <div class="form-group">
+
+                                <label>
+                                    Renk
+                                </label>
+
+                                <select id="variantColorSelect" class="form-control">
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="mt-4">
+
+                        <label class="mb-2">
+
+                            Fotoğraflar
+
+                        </label>
+
+                        <input type="file" id="variantImagesInput" class="form-control" multiple
+                            onchange="handleVariantImages(event)">
+                    </div>
+
+                    <div id="variantImagesArea" style="
+                        display:grid;
+grid-template-columns:
+repeat(auto-fill,minmax(130px,1fr));
+gap:18px;
+                        margin-top:24px;
+                    ">
+                    </div>
+                    <hr class="my-5">
+
+                    <!-- SIZES HEADER -->
+
+                    <div class="
+        d-flex
+        justify-content-between
+        align-items-center
+        mb-4
+    ">
+
+                        <h4 style="
+            font-weight:800;
+            margin:0;
+        ">
+
+                            Numaralar
+
+                        </h4>
+
+                        <button class="site-btn" type="button" onclick="addSizeInput()">
+
+                            + Numara Ekle
+
+                        </button>
+
+                    </div>
+
+                    <!-- SIZE AREA -->
+
+                    <div id="variantSizesArea">
+
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button type="button" class="site-btn" onclick="saveVariantChanges()">
+
+                        Kaydet
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

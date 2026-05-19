@@ -1,0 +1,1664 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Male_Fashion Template">
+    <meta name="keywords" content="Male_Fashion, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Male-Fashion | Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+
+    <link rel="stylesheet" href="../css/font-awesome.min.css" type="text/css">
+
+    <link rel="stylesheet" href="../css/elegant-icons.css" type="text/css">
+
+    <link rel="stylesheet" href="../css/magnific-popup.css" type="text/css">
+
+    <link rel="stylesheet" href="../css/nice-select.css" type="text/css">
+
+    <link rel="stylesheet" href="../css/owl.carousel.min.css" type="text/css">
+
+    <link rel="stylesheet" href="../css/slicknav.min.css" type="text/css">
+
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Begin -->
+
+    <!-- Offcanvas Menu End -->
+
+
+    <!-- Header Section Begin -->
+    <!-- Header Section End -->
+
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-option">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb__text">
+                        <h4>Admin Panel</h4>
+                        <div class="breadcrumb__links">
+                            <a href="/admin/dashboard.html">Dashboard</a>
+                            <span>Dashboard</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End -->
+    <div id="profileLoader" style="
+        height:500px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size:22px;
+        font-weight:700;
+    ">
+
+        Yükleniyor...
+
+    </div>
+
+    <!-- About Section Begin -->
+    <section class="profile-section spad" id="profileContent" style="display:none;">
+
+        <div class="container">
+
+            <div class="row">
+
+                <!-- SOL MENU -->
+
+                <div class="col-lg-3">
+
+                    <div id="sidebar-container"></div>
+
+                </div>
+
+
+                <!-- SAĞ PANEL -->
+
+                <div class="col-lg-9">
+
+                    <div style="
+                    background:#fff;
+                    border:1px solid #eee;
+                    border-radius:14px;
+                    padding:40px;
+                    box-shadow:0 5px 20px rgba(0,0,0,0.04);
+                ">
+
+                        <div style="
+                        display:flex;
+                        align-items:center;
+                        justify-content:space-between;
+                        margin-bottom:35px;
+                    ">
+
+                            <div>
+
+                                <h3 style="
+                                        font-weight:700;
+                                        margin-bottom:8px;
+                                    ">
+                                    Yeni Ürün Ekle
+                                </h3>
+
+                                <p style="
+                                        color:#777;
+                                        margin:0;
+                                    ">
+                                    Yeni ürün oluşturabilirsiniz.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- İSTATİSTİK KARTLARI -->
+
+                        <div style="
+    margin-top:30px;
+">
+
+                            <div class="row">
+
+                                <div class="col-lg-6">
+
+                                    <div class="checkout__input">
+
+                                        <p>Ürün Adı</p>
+
+                                        <input type="text" id="nameInput" placeholder="Ürün adı girin">
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="col-lg-6">
+
+                                    <div class="checkout__input">
+
+                                        <p>Kategori</p>
+
+                                        <select id="categoryInput">
+
+                                            <option value="">
+                                                Kategori Seç
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="col-lg-6">
+
+                                    <div class="checkout__input">
+
+                                        <p>Marka</p>
+
+                                        <select id="brandInput">
+
+                                            <option value="">
+                                                Marka Seç
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="col-lg-6">
+
+                                    <div class="checkout__input">
+
+                                        <p>Cinsiyet</p>
+
+                                        <select id="genderInput">
+
+                                            <option value="male">
+                                                Erkek
+                                            </option>
+
+                                            <option value="female">
+                                                Kadın
+                                            </option>
+
+                                            <option value="unisex">
+                                                Unisex
+                                            </option>
+
+                                            <option value="kids">
+                                                Çocuk
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="col-lg-12">
+
+                                    <div class="checkout__input">
+
+                                        <p>Açıklama</p>
+
+                                        <textarea id="descriptionInput" placeholder="Ürün açıklaması" style="
+                        width:100%;
+                        height:140px;
+                        border:1px solid #e1e1e1;
+                        border-radius:8px;
+                        padding:15px;
+                    "></textarea>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <hr style="
+        margin:40px 0;
+    ">
+
+
+
+                            <div style="
+    margin-top:40px;
+">
+
+                                <div style="
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        margin-bottom:25px;
+    ">
+
+                                    <h4 style="
+            font-weight:700;
+            margin:0;
+        ">
+                                        Ürün Varyantları
+                                    </h4>
+
+
+
+                                    <button type="button" id="addVariantButton" class="site-btn">
+
+                                        + Varyant Ekle
+
+                                    </button>
+
+                                </div>
+
+
+
+                                <div id="variantsContainer" style="
+            display:flex;
+            flex-direction:column;
+            gap:25px;
+        ">
+
+                                </div>
+
+                            </div>
+
+
+
+                            <button id="createProductButton" class="site-btn" style="
+        margin-top:40px;
+        border-radius:10px;
+        padding:14px 35px;
+    ">
+
+                                Ürünü Oluştur
+
+                            </button>
+
+                        </div>
+
+
+                        <!-- ALT ALAN -->
+
+
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- About Section End -->
+
+    <!-- Testimonial Section Begin -->
+
+    <!-- Testimonial Section End -->
+
+    <!-- Counter Section Begin -->
+
+    <!-- Counter Section End -->
+
+    <!-- Team Section Begin -->
+
+
+    <!-- Team Section End -->
+
+    <!-- Client Section Begin -->
+
+
+    <!-- Client Section End -->
+
+    <!-- Footer Section Begin -->
+
+    <!-- Footer Section End -->
+
+    <!-- Search Begin -->
+
+    <!-- Search End -->
+
+    <!-- Js Plugins -->
+    <script src="../js/jquery-3.3.1.min.js"></script>
+
+    <script src="../js/bootstrap.min.js"></script>
+
+    <script src="../js/jquery.nice-select.min.js"></script>
+
+    <script src="../js/jquery.nicescroll.min.js"></script>
+
+    <script src="../js/jquery.magnific-popup.min.js"></script>
+
+    <script src="../js/jquery.countdown.min.js"></script>
+
+    <script src="../js/jquery.slicknav.js"></script>
+
+    <script src="../js/mixitup.min.js"></script>
+
+    <script src="../js/owl.carousel.min.js"></script>
+
+    <script src="../js/main.js"></script>
+
+
+    <div id="variantModal" style="
+        position:fixed;
+        inset:0;
+        background:rgba(0,0,0,0.5);
+        z-index:999999;
+        display:none;
+        align-items:center;
+        justify-content:center;
+        padding:20px;
+    ">
+
+        <div style="
+        width:100%;
+        max-width:900px;
+        background:white;
+        border-radius:20px;
+        padding:35px;
+        max-height:90vh;
+        overflow-y:auto;
+    ">
+
+            <div style="
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            margin-bottom:30px;
+        ">
+
+                <h3 style="
+                margin:0;
+                font-weight:700;
+            ">
+                    Varyant Oluştur
+                </h3>
+
+
+
+                <button type="button" id="closeVariantModal" style="
+                    border:none;
+                    background:none;
+                    font-size:28px;
+                    font-weight:700;
+                    cursor:pointer;
+                ">
+                    ×
+                </button>
+
+            </div>
+
+
+
+            <div class="row">
+
+                <div class="col-lg-6">
+
+                    <div class="checkout__input">
+
+                        <p>Varyant Adı</p>
+
+                        <input type="text" id="variantNameInput" placeholder="Siyah Variantı">
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="col-lg-6">
+
+                    <div class="checkout__input">
+
+                        <p>Renk</p>
+
+                        <select id="variantColorInput">
+
+                            <option value="">
+                                Renk Seç
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="col-lg-12">
+
+                    <div class="checkout__input">
+
+                        <p>Fotoğraflar</p>
+
+                        <input type="file" id="variantImagesInput" multiple>
+                        <div id="imagePreviewContainer" style="
+        display:flex;
+        flex-wrap:wrap;
+        gap:15px;
+        margin-top:20px;
+    ">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <hr style="
+            margin:35px 0;
+        ">
+
+
+
+            <div style="
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            margin-bottom:20px;
+        ">
+
+                <h4 style="
+                margin:0;
+                font-weight:700;
+            ">
+                    Numaralar
+                </h4>
+
+
+
+                <button type="button" id="addSizeButton" class="site-btn">
+                    + Numara Ekle
+                </button>
+
+            </div>
+
+
+
+            <div id="sizesContainer" style="
+                display:flex;
+                flex-direction:column;
+                gap:15px;
+            ">
+
+            </div>
+
+
+
+            <button type="button" id="saveVariantButton" class="site-btn" style="
+                margin-top:30px;
+            ">
+                Varyantı Kaydet
+            </button>
+
+        </div>
+
+    </div>
+    <script>
+
+        const API_BASE =
+            "http://127.0.0.1:8000/api";
+
+
+
+        const token =
+            localStorage.getItem("admin_token");
+
+
+
+        if (!token) {
+
+            window.location.href =
+                "login.html";
+        }
+
+        function showPopup(
+            message,
+            success = true
+        ) {
+
+            const popup =
+                document.getElementById(
+                    "popup"
+                );
+
+
+
+            const popupText =
+                document.getElementById(
+                    "popupText"
+                );
+
+
+
+            const popupIcon =
+                document.getElementById(
+                    "popupIcon"
+                );
+
+
+
+            popupText.innerText =
+                message;
+
+
+
+            if (success) {
+
+                popupIcon.style.background =
+                    "#27ae60";
+
+
+
+                popupIcon.innerText =
+                    "✓";
+
+            }
+            else {
+
+                popupIcon.style.background =
+                    "#e74c3c";
+
+
+
+                popupIcon.innerText =
+                    "!";
+            }
+
+
+
+            popup.style.display =
+                "flex";
+
+
+
+            setTimeout(function () {
+
+                popup.style.display =
+                    "none";
+
+            }, 3000);
+        }
+
+
+
+        async function loadCategories() {
+
+            const response =
+                await fetch(
+                    API_BASE + "/categories"
+                );
+
+
+
+            const data =
+                await response.json();
+
+
+
+            const select =
+                document.getElementById(
+                    "categoryInput"
+                );
+
+
+
+            data.data.forEach(category => {
+
+                select.innerHTML += `
+                
+                    <option value="${category.id}">
+                        ${category.name}
+                    </option>
+                
+                `;
+            });
+
+
+
+            $('#categoryInput').niceSelect('update');
+
+        }
+
+
+
+
+        async function loadBrands() {
+
+            const response =
+                await fetch(
+                    API_BASE + "/brands"
+                );
+
+
+
+            const data =
+                await response.json();
+
+
+
+            const select =
+                document.getElementById(
+                    "brandInput"
+                );
+
+
+
+            data.data.forEach(brand => {
+
+                select.innerHTML += `
+        
+            <option value="${brand.id}">
+                ${brand.name}
+            </option>
+        
+        `;
+            });
+
+            $('#brandInput').niceSelect('update');
+
+        }
+
+
+
+
+        async function loadColors() {
+
+            const response =
+                await fetch(
+                    API_BASE + "/colors"
+                );
+
+
+
+            const data =
+                await response.json();
+
+
+
+            const select =
+                document.getElementById(
+                    "variantColorInput"
+                );
+
+
+
+            data.data.forEach(color => {
+
+                select.innerHTML += `
+        
+            <option value="${color.id}">
+                ${color.name}
+            </option>
+        
+        `;
+            });
+            $('#variantColorInput').niceSelect('update');
+
+        }
+
+
+
+        loadCategories();
+
+        loadBrands();
+
+        loadColors();
+
+        document
+            .getElementById(
+                "profileLoader"
+            )
+            .style.display =
+            "none";
+
+
+
+        document
+            .getElementById(
+                "profileContent"
+            )
+            .style.display =
+            "block";
+
+
+        const variantModal =
+            document.getElementById(
+                "variantModal"
+            );
+
+        let variants = [];
+
+        let selectedImages = [];
+
+
+
+        document
+            .getElementById(
+                "variantImagesInput"
+            )
+            .addEventListener(
+                "change",
+                handleImages
+            );
+
+
+
+        function handleImages(event) {
+
+            const files =
+                Array.from(
+                    event.target.files
+                );
+
+
+
+            selectedImages = [
+                ...selectedImages,
+                ...files
+            ];
+
+
+
+            renderImagePreviews();
+        }
+
+        function renderImagePreviews() {
+
+            const container =
+                document.getElementById(
+                    "imagePreviewContainer"
+                );
+
+
+
+            container.innerHTML = "";
+
+
+
+            selectedImages.forEach(
+                (image, index) => {
+
+                    const imageUrl =
+                        URL.createObjectURL(
+                            image
+                        );
+
+
+
+                    container.innerHTML += `
+
+                <div style="
+                    width:120px;
+                    border:1px solid #eee;
+                    border-radius:12px;
+                    overflow:hidden;
+                    background:white;
+                ">
+
+                    <img
+                        src="${imageUrl}"
+                        style="
+                            width:100%;
+                            height:120px;
+                            object-fit:cover;
+                        "
+                    >
+
+
+
+                    <button
+                        type="button"
+                        onclick="removeImage(${index})"
+                        style="
+                            width:100%;
+                            border:none;
+                            background:#e74c3c;
+                            color:white;
+                            padding:10px;
+                            font-weight:600;
+                            cursor:pointer;
+                        "
+                    >
+                        Sil
+                    </button>
+
+                </div>
+
+            `;
+                }
+            );
+        }
+
+        function removeImage(index) {
+
+            selectedImages.splice(
+                index,
+                1
+            );
+
+
+
+            renderImagePreviews();
+        }
+        document
+            .getElementById(
+                "addVariantButton"
+            )
+            .addEventListener(
+                "click",
+                function () {
+
+                    variantModal.style.display =
+                        "flex";
+
+                }
+            );
+
+
+
+        document
+            .getElementById(
+                "closeVariantModal"
+            )
+            .addEventListener(
+                "click",
+                function () {
+
+                    variantModal.style.display =
+                        "none";
+
+                }
+            );
+
+        document
+            .getElementById(
+                "addSizeButton"
+            )
+            .addEventListener(
+                "click",
+                addSizeRow
+            );
+
+
+
+        function addSizeRow() {
+
+            const container =
+                document.getElementById(
+                    "sizesContainer"
+                );
+
+
+
+            const row =
+                document.createElement(
+                    "div"
+                );
+
+
+
+            row.className =
+                "row";
+
+
+
+            row.innerHTML = `
+
+        <div class="col-lg-3">
+
+            <input
+                type="number"
+                class="sizeInput"
+                placeholder="Numara"
+            >
+
+        </div>
+
+
+
+        <div class="col-lg-3">
+
+            <input
+                type="number"
+                class="stockInput"
+                placeholder="Stok"
+            >
+
+        </div>
+
+
+
+        <div class="col-lg-3">
+
+            <input
+                type="number"
+                class="priceInput"
+                placeholder="Fiyat"
+            >
+
+        </div>
+
+
+
+        <div class="col-lg-3">
+
+            <button
+                type="button"
+                class="site-btn"
+                style="
+                    background:#e74c3c;
+                    width:100%;
+                "
+                onclick="
+                    this.parentElement.parentElement.remove()
+                "
+            >
+                Sil
+            </button>
+
+        </div>
+
+    `;
+
+
+
+            container.appendChild(row);
+        }
+        document
+            .getElementById(
+                "saveVariantButton"
+            )
+            .addEventListener(
+                "click",
+                saveVariant
+            );
+
+
+
+        function saveVariant() {
+
+            const name =
+                document.getElementById(
+                    "variantNameInput"
+                ).value;
+
+
+
+            const colorId =
+                document.getElementById(
+                    "variantColorInput"
+                ).value;
+
+
+
+            const images = [...selectedImages];
+
+            const sizeRows =
+                document.querySelectorAll(
+                    "#sizesContainer .row"
+                );
+
+
+
+            let sizes = [];
+
+
+
+            sizeRows.forEach(row => {
+
+                sizes.push({
+
+                    size:
+                        row.querySelector(
+                            ".sizeInput"
+                        ).value,
+
+                    stock:
+                        row.querySelector(
+                            ".stockInput"
+                        ).value,
+
+                    price:
+                        row.querySelector(
+                            ".priceInput"
+                        ).value,
+                });
+
+            });
+
+
+
+            if (
+                !name ||
+                !colorId
+            ) {
+
+                showPopup(
+                    "Varyant bilgileri eksik",
+                    false
+                );
+
+                return;
+            }
+
+
+
+            if (sizes.length === 0) {
+
+                showPopup(
+                    "En az 1 numara ekleyin",
+                    false
+                );
+
+                return;
+            }
+
+
+
+            variants.push({
+
+                name,
+                color_id: colorId,
+                images,
+                sizes
+            });
+
+            renderVariants();
+
+            document.getElementById(
+                "variantNameInput"
+            ).value = "";
+
+            document.getElementById(
+                "variantColorInput"
+            ).value = "";
+
+            document.getElementById(
+                "sizesContainer"
+            ).innerHTML = "";
+
+            document.getElementById(
+                "imagePreviewContainer"
+            ).innerHTML = "";
+
+            document.getElementById(
+                "variantImagesInput"
+            ).value = "";
+
+            selectedImages = [];
+
+            variantModal.style.display =
+                "none";
+
+            showPopup(
+                "Varyant eklendi"
+            );
+        }
+
+        function renderVariants() {
+
+            const container =
+                document.getElementById(
+                    "variantsContainer"
+                );
+
+
+
+            container.innerHTML = "";
+
+
+
+            variants.forEach(
+                (variant, index) => {
+
+                    container.innerHTML += `
+
+                <div style="
+                    border:1px solid #eee;
+                    border-radius:16px;
+                    padding:25px;
+                    background:#fafafa;
+                ">
+
+                    <div style="
+                        display:flex;
+                        justify-content:space-between;
+                        align-items:center;
+                        margin-bottom:20px;
+                    ">
+
+                        <div>
+
+                            <h5 style="
+                                font-weight:700;
+                                margin-bottom:8px;
+                            ">
+                                ${variant.name}
+                            </h5>
+
+                            <p style="
+                                margin:0;
+                                color:#777;
+                            ">
+                                ${variant.sizes.length
+                        } numara • ${variant.images.length
+                        } fotoğraf
+                            </p>
+
+                        </div>
+
+
+
+                        <button
+                            type="button"
+                            onclick="removeVariant(${index})"
+                            class="site-btn"
+                            style="
+                                background:#e74c3c;
+                            "
+                        >
+                            Sil
+                        </button>
+
+                    </div>
+
+                </div>
+
+            `;
+                }
+            );
+        }
+
+        function removeVariant(index) {
+
+            variants.splice(
+                index,
+                1
+            );
+
+
+
+            renderVariants();
+        }
+
+        document
+            .getElementById(
+                "createProductButton"
+            )
+            .addEventListener(
+                "click",
+                createProduct
+            );
+
+
+
+        async function createProduct() {
+
+            const button =
+                document.getElementById(
+                    "createProductButton"
+                );
+
+
+
+            if (button.disabled) {
+                return;
+            }
+
+
+
+            button.disabled = true;
+
+            button.innerText =
+                "Oluşturuluyor...";
+
+
+
+            const name =
+                document.getElementById(
+                    "nameInput"
+                ).value.trim();
+
+
+
+            const categoryId =
+                document.getElementById(
+                    "categoryInput"
+                ).value;
+
+
+
+            const brandId =
+                document.getElementById(
+                    "brandInput"
+                ).value;
+
+
+
+            const gender =
+                document.getElementById(
+                    "genderInput"
+                ).value;
+
+
+
+            const description =
+                document.getElementById(
+                    "descriptionInput"
+                ).value.trim();
+
+
+
+            if (
+                !name ||
+                !categoryId ||
+                !brandId ||
+                !gender
+            ) {
+
+                showPopup(
+                    "Ürün alanları eksik",
+                    false
+                );
+
+                button.disabled = false;
+
+                button.innerText =
+                    "Ürünü Oluştur";
+
+                return;
+            }
+
+
+
+            if (
+                variants.length === 0
+            ) {
+
+                showPopup(
+                    "En az 1 varyant ekleyin",
+                    false
+                );
+
+                button.disabled = false;
+
+                button.innerText =
+                    "Ürünü Oluştur";
+
+                return;
+            }
+
+
+
+            const formData =
+                new FormData();
+
+
+
+            formData.append(
+                "name",
+                name
+            );
+
+
+
+            formData.append(
+                "category_id",
+                categoryId
+            );
+
+
+
+            formData.append(
+                "brand_id",
+                brandId
+            );
+
+
+
+            formData.append(
+                "gender",
+                gender
+            );
+
+
+
+            formData.append(
+                "description",
+                description
+            );
+
+
+
+            variants.forEach(
+                (
+                    variant,
+                    variantIndex
+                ) => {
+
+                    formData.append(
+                        `variants[${variantIndex}][name]`,
+                        variant.name
+                    );
+
+
+
+                    formData.append(
+                        `variants[${variantIndex}][color_id]`,
+                        variant.color_id
+                    );
+
+
+
+                    variant.sizes.forEach(
+                        (
+                            size,
+                            sizeIndex
+                        ) => {
+
+                            formData.append(
+                                `variants[${variantIndex}][sizes][${sizeIndex}][size]`,
+                                size.size
+                            );
+
+
+
+                            formData.append(
+                                `variants[${variantIndex}][sizes][${sizeIndex}][stock]`,
+                                size.stock
+                            );
+
+
+
+                            formData.append(
+                                `variants[${variantIndex}][sizes][${sizeIndex}][price]`,
+                                size.price
+                            );
+                        }
+                    );
+
+
+
+                    Array.from(
+                        variant.images
+                    ).forEach(
+
+                        (
+                            image,
+                            imageIndex
+                        ) => {
+
+                            formData.append(
+
+                                `variants[${variantIndex}][images][${imageIndex}]`,
+
+                                image
+                            );
+                        }
+                    );
+                }
+            );
+
+
+
+            try {
+
+                const response = await fetch(
+
+                    API_BASE + "/admin/products",
+
+                    {
+
+                        method: "POST",
+
+                        headers: {
+
+                            Authorization:
+                                "Bearer " + token,
+
+                            Accept:
+                                "application/json"
+                        },
+
+                        body: formData
+                    }
+                );
+
+
+
+                const data =
+                    await response.json();
+
+
+
+                console.log(data);
+
+
+
+                if (!response.ok) {
+
+                    showPopup(
+                        data.message ||
+                        "Ürün oluşturulamadı",
+                        false
+                    );
+
+                    return;
+                }
+
+
+
+                showPopup(
+                    "Ürün başarıyla oluşturuldu 🚀"
+                );
+
+
+
+                document.getElementById(
+                    "nameInput"
+                ).value = "";
+
+
+
+                document.getElementById(
+                    "categoryInput"
+                ).value = "";
+
+
+
+                document.getElementById(
+                    "brandInput"
+                ).value = "";
+
+
+
+                document.getElementById(
+                    "genderInput"
+                ).value = "male";
+
+
+
+                document.getElementById(
+                    "descriptionInput"
+                ).value = "";
+
+
+
+                $('#categoryInput')
+                    .niceSelect('update');
+
+
+
+                $('#brandInput')
+                    .niceSelect('update');
+
+
+
+                $('#genderInput')
+                    .niceSelect('update');
+
+
+
+                variants = [];
+
+
+
+                renderVariants();
+
+            }
+            catch (error) {
+
+                console.log(error);
+
+
+
+                showPopup(
+                    "Sunucu hatası",
+                    false
+                );
+            }
+            finally {
+
+                button.disabled = false;
+
+                button.innerText =
+                    "Ürünü Oluştur";
+            }
+        }
+    </script>
+
+    <script>
+
+        const currentPage =
+            "product-create";
+
+        async function loadSidebar() {
+
+            const response =
+                await fetch(
+                    "./sidebar.html"
+                );
+
+            const html =
+                await response.text();
+
+            document.getElementById(
+                "sidebar-container"
+            ).innerHTML = html;
+
+
+
+            const sidebarLinks =
+
+                document.querySelectorAll(
+                    ".sidebar-link"
+                );
+
+
+
+            sidebarLinks.forEach(link => {
+
+                if (
+
+                    link.dataset.page ===
+                    currentPage
+
+                ) {
+
+                    link.classList.add(
+                        "active"
+                    );
+                }
+            });
+        }
+
+        loadSidebar();
+
+    </script>
+
+
+
+
+
+    <div id="popup" style="
+    position:fixed;
+    top:30px;
+    right:30px;
+    background:white;
+    padding:18px 22px;
+    border-radius:16px;
+    box-shadow:0 10px 40px rgba(0,0,0,0.12);
+    z-index:99999;
+    display:none;
+    min-width:320px;
+    align-items:center;
+    gap:15px;
+">
+
+        <div id="popupIcon" style="
+        width:38px;
+        height:38px;
+        border-radius:50%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        color:white;
+        font-size:18px;
+        font-weight:bold;
+        background:#27ae60;
+    ">
+            ✓
+        </div>
+
+        <p id="popupText" style="
+        margin:0;
+        font-size:16px;
+        font-weight:600;
+        color:#222;
+    "></p>
+
+    </div>
+</body>
+
+</html>
