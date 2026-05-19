@@ -887,7 +887,7 @@
 
                 const response = await fetch(
 
-                    `http://localhost:8000/api/admin/orders/${orderId}`,
+                    `https://shoe-ecommerce-api.onrender.com/api/admin/orders/${orderId}`,
 
                     {
 
@@ -1178,7 +1178,7 @@
                 ">
 
                     <img
-                        src="http://127.0.0.1:8000/storage/${item.image}"
+                        src="https://shoe-ecommerce-api.onrender.com/storage/${item.image}"
                         style="
                             width:100%;
                             height:100%;
@@ -1486,7 +1486,7 @@
 
                 const response = await fetch(
 
-                    `http://127.0.0.1:8000/api/admin/orders/${orderId}/status`,
+                    `https://shoe-ecommerce-api.onrender.com/api/admin/orders/${orderId}/status`,
 
                     {
                         method: "POST",
