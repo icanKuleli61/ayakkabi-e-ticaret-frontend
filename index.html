@@ -724,7 +724,9 @@ background-color:#f5f5f5;
                                 <a
                                     href="#"
 
-                                    onclick="
+                                   onclick="
+                                        event.preventDefault();
+
                                         event.stopPropagation();
 
                                         toggleFavorite(
