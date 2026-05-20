@@ -776,92 +776,7 @@
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
-    <script>
 
-        const params =
-            new URLSearchParams(window.location.search);
-
-        const gender =
-            params.get("gender");
-
-        const pageTitle =
-            document.getElementById("pageTitle");
-
-        const breadcrumbTitle =
-            document.getElementById("breadcrumbTitle");
-
-        const menuProducts =
-            document.getElementById("menuProducts");
-
-        const menuWomen =
-            document.getElementById("menuWomen");
-
-        const menuMen =
-            document.getElementById("menuMen");
-
-        const menuKids =
-            document.getElementById("menuKids");
-        const categoryCard =
-            document.querySelector(".category-card");
-
-        if (gender) {
-            categoryCard.style.display = "none";
-        }
-
-
-
-        if (!gender) {
-
-            pageTitle.innerText =
-                "Ürünler";
-
-            breadcrumbTitle.innerText =
-                "Ürünler";
-
-            menuProducts.classList.add("active");
-        }
-
-
-
-        if (gender === "women") {
-
-            pageTitle.innerText =
-                "Kadın Ayakkabıları";
-
-            breadcrumbTitle.innerText =
-                "Kadın Ayakkabıları";
-
-            menuWomen.classList.add("active");
-        }
-
-
-
-        if (gender === "men") {
-
-            pageTitle.innerText =
-                "Erkek Ayakkabıları";
-
-            breadcrumbTitle.innerText =
-                "Erkek Ayakkabıları";
-
-            menuMen.classList.add("active");
-        }
-
-
-
-        if (gender === "kids") {
-
-            pageTitle.innerText =
-                "Çocuk Ayakkabıları";
-
-            breadcrumbTitle.innerText =
-                "Çocuk Ayakkabıları";
-
-            menuKids.classList.add("active");
-        }
-
-
-    </script>
     <script>
 
         const API_BASE =
@@ -937,6 +852,11 @@
         const addressTitleInput =
             document.getElementById("addressTitleInput");
 
+        const deliveryFullNameInput =
+            document.getElementById("deliveryFullNameInput");
+
+        const deliveryPhoneInput =
+            document.getElementById("deliveryPhoneInput");
 
 
         // ERRORS
@@ -1314,8 +1234,8 @@
                             method: "POST",
 
                             headers: {
-                                "Content-Type":
-                                    "application/json"
+                                "Content-Type": "application/json",
+                                "Accept": "application/json"
                             },
 
                             body: JSON.stringify({
@@ -1347,9 +1267,6 @@
                                 gender:
                                     genderSelect.value,
 
-                                gender:
-                                    genderSelect.value,
-
                                 password:
                                     passwordInput.value,
 
@@ -1375,35 +1292,38 @@
 
 
 
-                const text = await response.text();
+                const data = await response.json();
 
-                console.log(text);
-
-                let data = {};
-
-                try {
-
-                    data = JSON.parse(text);
-
-                }
-                catch {
-
-                    console.log("JSON parse hatası");
-
-                    console.log(text);
-                }
+                console.log(data);
 
 
 
                 // BACKEND MESAJI
 
+                if (!response.ok) {
+
+                    showPopup(
+                        data.message || data.error || "Sunucu hatası",
+                        false
+                    );
+
+                    console.log(data);
+
+                    registerButton.disabled = false;
+
+                    registerButton.innerText = "Kayıt Ol";
+
+                    return;
+                }
+
                 showPopup(
-                    data.message,
-                    response.ok
+                    data.message || "Kayıt başarılı",
+                    true
                 );
-
-
-
+                console.log(data);
+                if (!data.message) {
+                    data.message = "Kayıt başarılı";
+                }
                 // BAŞARILI
 
                 if (response.ok) {
