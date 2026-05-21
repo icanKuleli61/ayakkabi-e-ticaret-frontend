@@ -653,6 +653,11 @@
             );
 
         let currentProduct = null;
+
+        let currentReviews = [];
+
+        let currentReviewStatistics = null;
+
         let currentVariant = null;
         let currentImages = [];
         let currentImageIndex = 0;
@@ -713,7 +718,7 @@
                     await response.json();
 
 
-
+                console.log(result);
                 currentProduct =
                     result.data;
 
@@ -737,6 +742,9 @@
 
 
                 renderProduct();
+                await fetchReviewStatistics();
+
+                await fetchReviews();
 
             }
 
@@ -748,15 +756,8 @@
 
 
 
-
-
-        /*
-        |--------------------------------------------------------------------------
-        | ÜRÜN RENDER
-        |--------------------------------------------------------------------------
-        */
-
         function renderProduct() {
+
 
             document.getElementById(
                 "productDescription"
@@ -764,62 +765,15 @@
                 currentProduct.description;
 
 
-
-            const averageRating =
-                Number(
-                    currentProduct.reviews_avg_rating || 0
-                );
-
-            const reviewCount =
-                Number(
-                    currentProduct.reviews_count || 0
-                );
-
-
-
-            document.getElementById(
-                "productRating"
-            ).innerHTML =
-                renderStars(
-                    averageRating
-                );
-
-
-
-            document.getElementById(
-                "productReviewCount"
-            ).innerHTML = `
-
-            <b>
-                ${averageRating.toFixed(1)}
-            </b>
-
-            •
-
-            ${reviewCount} değerlendirme
-
-        `;
-
-
-
-            renderReviewSummary(
-                averageRating,
-                reviewCount
-            );
-
-            renderReviews();
-
             renderReviewForm();
-
 
 
             renderVariants(
                 currentProduct.variants
             );
 
+
             updateFavoriteIcon();
-
-
 
             const params =
                 new URLSearchParams(
@@ -846,7 +800,6 @@
                         foundVariant;
                 }
             }
-
             renderVariant(
                 selectedVariant
             );
@@ -881,7 +834,15 @@
 
             return html;
         }
+        function escapeHtml(text) {
 
+            return text
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
 
 
 
@@ -895,33 +856,18 @@
 
         function renderReviewSummary() {
 
-            const reviews =
-                currentProduct.reviews || [];
 
-            const total =
-                reviews.length;
+            const average = Number(
 
-            const average =
+                currentReviewStatistics
+                    ?.average_rating || 0
 
-                total > 0
+            ).toFixed(1);
+            const total = Number(
 
-                    ? (
-
-                        reviews.reduce(
-
-                            (sum, review) =>
-
-                                sum +
-                                Number(review.rating),
-
-                            0
-
-                        ) / total
-
-                    ).toFixed(1)
-
-                    : "0.0";
-
+                currentReviewStatistics
+                    ?.reviews_count || 0
+            );
 
 
             document.getElementById(
@@ -992,7 +938,7 @@
         function renderDynamicStarBars() {
 
             const reviews =
-                currentProduct.reviews || [];
+                currentReviews || [];
 
             const total =
                 reviews.length;
@@ -2178,7 +2124,7 @@
                 );
 
             const reviews =
-                currentProduct.reviews || [];
+                currentReviews || [];
 
             if (reviews.length === 0) {
 
@@ -2269,8 +2215,9 @@
                     margin:0;
                     font-size:16px;
                 ">
-                    ${review.comment || ''}
-                </p>
+                ${escapeHtml(
+                    review.comment || ''
+                )}                </p>
 
             </div>
 
@@ -2539,8 +2486,9 @@
                 |--------------------------------------------------------------------------
                 */
 
-                fetchProduct();
+                await fetchReviewStatistics();
 
+                await fetchReviews();
             }
 
             catch (error) {
@@ -2553,6 +2501,111 @@
                 );
             }
         }
+
+
+        async function fetchReviews() {
+
+            try {
+
+                const response =
+                    await fetch(
+
+                        API_BASE +
+                        "/products/" +
+                        currentProduct.id +
+                        "/reviews"
+                    );
+
+                const result =
+                    await response.json();
+
+                console.log(result);
+
+                currentReviews =
+                    result.data;
+
+                renderReviews();
+
+                renderReviewSummary();
+
+            }
+
+            catch (error) {
+
+                console.log(error);
+            }
+        }
+
+
+        async function fetchReviewStatistics() {
+
+            try {
+
+                const response =
+                    await fetch(
+
+                        API_BASE +
+                        "/products/" +
+                        currentProduct.id +
+                        "/statistics"
+                    );
+
+                const result =
+                    await response.json();
+
+                currentReviewStatistics =
+                    result.data;
+
+                updateReviewHeader();
+
+
+            }
+
+            catch (error) {
+
+                console.log(error);
+            }
+        }
+
+        function updateReviewHeader() {
+
+            const averageRating =
+                Number(
+
+                    currentReviewStatistics
+                        ?.average_rating || 0
+                );
+
+            const reviewCount =
+                Number(
+
+                    currentReviewStatistics
+                        ?.reviews_count || 0
+                );
+
+            document.getElementById(
+                "productRating"
+            ).innerHTML =
+
+                renderStars(
+                    averageRating
+                );
+
+            document.getElementById(
+                "productReviewCount"
+            ).innerHTML = `
+
+        <b>
+            ${averageRating.toFixed(1)}
+        </b>
+
+        •
+
+        ${reviewCount} değerlendirme
+    `;
+        }
+
+
 
         function selectReviewRating(rating) {
 
