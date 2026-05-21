@@ -893,7 +893,7 @@
                 const result =
                     await response.json();
 
-
+                console.log(result.data);
 
                 banners =
                     result.data ?? [];
@@ -1021,27 +1021,25 @@
                                 id="status-${banner.id}"
                             >
 
-                                <option
-                                    value="1"
-                                    ${banner.is_active
+                                                        <option
+                                value="1"
+                                ${String(banner.is_active) === 'true' ||
+                        Number(banner.is_active) === 1
                         ? 'selected'
                         : ''}
-                                >
+                            >
+                                Aktif
+                            </option>
 
-                                    Aktif
-
-                                </option>
-
-                                <option
-                                    value="0"
-                                    ${!banner.is_active
+                            <option
+                                value="0"
+                                ${String(banner.is_active) === 'false' ||
+                        Number(banner.is_active) === 0
                         ? 'selected'
                         : ''}
-                                >
-
-                                    Pasif
-
-                                </option>
+                            >
+                                Pasif
+                            </option>
 
                             </select>
 
