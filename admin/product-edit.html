@@ -1532,7 +1532,7 @@
 
 
             selectedImages =
-                variant.images ?? [];
+                [...(variant.images ?? [])];
 
 
 
@@ -1808,7 +1808,6 @@
             };
             selectedImages = [];
 
-            deletedImages = [];
 
             document.getElementById(
                 "variantNameInput"
@@ -2815,8 +2814,7 @@
 
 
                     currentVariant.images =
-                        selectedImages;
-
+                        [...selectedImages];
 
 
                     currentVariant.sizes =
