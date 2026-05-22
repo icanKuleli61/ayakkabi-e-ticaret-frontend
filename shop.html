@@ -1310,17 +1310,17 @@
 
         loadProducts();
 
-        document
-            .getElementById("sortSelect")
+        $(document).on(
 
-            .addEventListener(
-                "change",
+            "change",
 
-                function () {
+            "#sortSelect",
 
-                    loadProducts();
-                }
-            );
+            function () {
+
+                loadProducts();
+            }
+        );
         document
             .querySelector(".my-filter-btn")
 
@@ -1436,23 +1436,6 @@
             }, 2500);
         }
 
-        document
-            .querySelectorAll(
-                '.brand-checkbox, .size-checkbox, .gender-checkbox, .category-checkbox'
-            )
-
-            .forEach(input => {
-
-                input.addEventListener(
-
-                    "change",
-
-                    function () {
-
-                        loadProducts();
-                    }
-                );
-            });
 
     </script>
 
