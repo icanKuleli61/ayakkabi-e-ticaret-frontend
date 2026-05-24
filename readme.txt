@@ -48,33 +48,6 @@ Backend tarafında Laravel RESTful API mimarisi kullanılmıştır.
 
 ---
 
-# 📂 Proje Klasör Yapısı
-
-```bash
-frontend/
-│
-├── css/
-├── js/
-├── images/
-├── screenshots/
-├── docs/
-├── bileşenler/
-├── yönetici/
-│
-├── index.html
-├── shop.html
-├── product-details.html
-├── cart.html
-├── checkout.html
-├── login.html
-├── register.html
-├── profile.html
-├── orders.html
-└── order-detail.html
-```
-
----
-
 # 🔗 Canlı Demo
 
 ## Frontend
