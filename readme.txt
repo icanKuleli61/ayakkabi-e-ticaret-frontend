@@ -3,7 +3,7 @@
 Modern ve mobil uyumlu ayakkabı e-ticaret frontend uygulaması.
 
 Bu proje HTML, CSS, JavaScript ve Bootstrap kullanılarak geliştirilmiştir.
-Backend tarafında Laravel RESTful API mimarisi kullanılmıştır.
+Backend tarafında Laravel tabanlı RESTful API mimarisi kullanılmıştır.
 
 ---
 
@@ -28,7 +28,7 @@ Backend tarafında Laravel RESTful API mimarisi kullanılmıştır.
 
 # 🛠 Kullanılan Teknolojiler
 
-## Frontend
+## 🎨 Frontend
 
 * HTML5
 * CSS3
@@ -37,12 +37,12 @@ Backend tarafında Laravel RESTful API mimarisi kullanılmıştır.
 * jQuery
 * Owl Carousel
 
-## Backend
+## ⚙ Backend
 
 * Laravel
 * PHP
 * PostgreSQL
-* JWT Auth
+* JWT Authentication
 * RESTful API
 * Render Deployment
 
@@ -50,13 +50,38 @@ Backend tarafında Laravel RESTful API mimarisi kullanılmıştır.
 
 # 🔗 Canlı Demo
 
-## Frontend
+## 🌐 Frontend
 
 https://ayakkabi-e-ticaret-frontend.onrender.com
 
-## Backend API
+## 🔌 Backend API
 
 https://shoe-ecommerce-api.onrender.com
+
+---
+
+# 📂 Proje Klasör Yapısı
+
+```bash
+frontend/
+│
+├── css/
+├── js/
+├── images/
+├── screenshots/
+├── docs/
+│
+├── index.html
+├── shop.html
+├── cart.html
+├── favorites.html
+├── profile.html
+├── orders.html
+├── order-detail.html
+├── login.html
+├── register.html
+└── checkout.html
+```
 
 ---
 
@@ -84,46 +109,96 @@ https://shoe-ecommerce-api.onrender.com
 
 ## 🏠 Ana Sayfa
 
-![Ana Sayfa](./screenshots/home.png)
+![Ana Sayfa](./screenshots/anasayfa1.png)
+
+---
+
+## 🏠 Ana Sayfa Slider
+
+![Ana Sayfa Slider](./screenshots/anasayfa2.png)
 
 ---
 
 ## 🛍 Ürünler Sayfası
 
-![Ürünler](./screenshots/shop.png)
+![Ürünler](./screenshots/ürünler.png)
+
+---
+
+## 👟 Ürün Detay Sayfası
+
+![Ürün Detay](./screenshots/ürün-detay.png)
 
 ---
 
 ## 🛒 Sepet Sayfası
 
-![Sepet](./screenshots/cart.png)
+![Sepet](./screenshots/sepet.png)
+
+---
+
+## ❤️ Favoriler Sayfası
+
+![Favoriler](./screenshots/favori.png)
 
 ---
 
 ## 📦 Siparişler Sayfası
 
-![Siparişler](./screenshots/orders.png)
+![Siparişler](./screenshots/sipariş.png)
+
+---
+
+## 👤 Profil Sayfası
+
+![Profil](./screenshots/profil.png)
+
+---
+
+## 💳 Cüzdan Sayfası
+
+![Cüzdan](./screenshots/cüzdan.png)
+
+---
+
+## 🔐 Giriş Sayfası
+
+![Giriş](./screenshots/giriş.png)
+
+---
+
+## 📞 İletişim Sayfası
+
+![İletişim](./screenshots/iletişim.png)
 
 ---
 
 # ⚙ Kurulum
 
+## 📥 Projeyi Klonlayın
+
 ```bash
-git clone https://github.com/kullaniciadi/ayakkabi-e-ticaret-frontend.git
+git clone https://github.com/icanKuleli61/ayakkabi-e-ticaret-frontend.git
 ```
-
-Projeyi VS Code ile açın.
-
-Live Server ile çalıştırın.
 
 ---
 
-# 👨‍💻 Geliştirici
+## 📂 Proje Klasörüne Girin
 
-İlyas Kuleli
+```bash
+cd ayakkabi-e-ticaret-frontend
+```
+
+---
+
+## ▶ Projeyi Çalıştırın
+
+Projeyi VS Code ile açın ve Live Server kullanarak çalıştırın.
 
 ---
 
 # 📌 Not
 
 Bu proje eğitim ve bitirme projesi amacıyla geliştirilmiştir.
+
+Frontend tarafında hazır template yapıları kullanılmış ve proje ihtiyaçlarına göre özelleştirilmiştir.
