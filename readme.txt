@@ -2,27 +2,27 @@
 
 Modern ve mobil uyumlu ayakkabı e-ticaret frontend uygulaması.
 
-Bu proje HTML, CSS, JavaScript ve Bootstrap kullanılarak geliştirilmiştir.
+Bu proje HTML, CSS, JavaScript ve Bootstrap kullanılarak geliştirilmiştir.  
 Backend tarafında Laravel tabanlı RESTful API mimarisi kullanılmıştır.
 
 ---
 
 # 🚀 Proje Özellikleri
 
-* Responsive (Mobil Uyumlu) Tasarım
-* Kullanıcı Giriş & Kayıt Sistemi
-* JWT Authentication Entegrasyonu
-* Ürün Listeleme Sistemi
-* Ürün Detay Sayfası
-* Kategori Filtreleme
-* Favori Sistemi
-* Sepet Sistemi
-* Sipariş Sistemi
-* Profil Yönetimi
-* Adres Yönetimi
-* Sipariş Takip Sistemi
-* Dinamik Banner Sistemi
-* REST API Destekli Veri Çekme
+- Responsive (Mobil Uyumlu) Tasarım
+- Kullanıcı Giriş & Kayıt Sistemi
+- JWT Authentication Entegrasyonu
+- Ürün Listeleme Sistemi
+- Ürün Detay Sayfası
+- Kategori Filtreleme
+- Favori Sistemi
+- Sepet Sistemi
+- Sipariş Sistemi
+- Profil Yönetimi
+- Adres Yönetimi
+- Sipariş Takip Sistemi
+- Dinamik Banner Sistemi
+- REST API Destekli Veri Çekme
 
 ---
 
@@ -30,21 +30,21 @@ Backend tarafında Laravel tabanlı RESTful API mimarisi kullanılmıştır.
 
 ## 🎨 Frontend
 
-* HTML5
-* CSS3
-* JavaScript
-* Bootstrap
-* jQuery
-* Owl Carousel
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap
+- jQuery
+- Owl Carousel
 
 ## ⚙ Backend
 
-* Laravel
-* PHP
-* PostgreSQL
-* JWT Authentication
-* RESTful API
-* Render Deployment
+- Laravel
+- PHP
+- PostgreSQL
+- JWT Authentication
+- RESTful API
+- Render Deployment
 
 ---
 
@@ -65,11 +65,15 @@ https://shoe-ecommerce-api.onrender.com
 ```bash
 frontend/
 │
+├── admin/
+├── components/
 ├── css/
-├── js/
-├── images/
-├── screenshots/
 ├── docs/
+├── fonts/
+├── img/
+├── js/
+├── sass/
+├── screenshots/
 │
 ├── index.html
 ├── shop.html
@@ -101,7 +105,7 @@ frontend/
 
 ## 🔄 Akış Diyagramı
 
-[📥 Akış Diyagramını Görüntüle](./docs/akis-diyagrami.pdf)
+[📥 Akış Diyagramını Görüntüle](./docs/flow-diagram.pdf)
 
 ---
 
@@ -109,67 +113,67 @@ frontend/
 
 ## 🏠 Ana Sayfa
 
-![Ana Sayfa](./screenshots/anasayfa1.png)
+![Ana Sayfa](./screenshots/home-1.png)
 
 ---
 
 ## 🏠 Ana Sayfa Slider
 
-![Ana Sayfa Slider](./screenshots/anasayfa2.png)
+![Ana Sayfa Slider](./screenshots/home-slider.png)
 
 ---
 
 ## 🛍 Ürünler Sayfası
 
-![Ürünler](./screenshots/ürünler.png)
+![Ürünler](./screenshots/products.png)
 
 ---
 
 ## 👟 Ürün Detay Sayfası
 
-![Ürün Detay](./screenshots/ürün-detay.png)
+![Ürün Detay](./screenshots/product-detail.png)
 
 ---
 
 ## 🛒 Sepet Sayfası
 
-![Sepet](./screenshots/sepet.png)
+![Sepet](./screenshots/cart.png)
 
 ---
 
 ## ❤️ Favoriler Sayfası
 
-![Favoriler](./screenshots/favori.png)
+![Favoriler](./screenshots/favorites.png)
 
 ---
 
 ## 📦 Siparişler Sayfası
 
-![Siparişler](./screenshots/sipariş.png)
+![Siparişler](./screenshots/orders.png)
 
 ---
 
 ## 👤 Profil Sayfası
 
-![Profil](./screenshots/profil.png)
+![Profil](./screenshots/profile.png)
 
 ---
 
 ## 💳 Cüzdan Sayfası
 
-![Cüzdan](./screenshots/cüzdan.png)
+![Cüzdan](./screenshots/wallet.png)
 
 ---
 
 ## 🔐 Giriş Sayfası
 
-![Giriş](./screenshots/giriş.png)
+![Giriş](./screenshots/login.png)
 
 ---
 
 ## 📞 İletişim Sayfası
 
-![İletişim](./screenshots/iletişim.png)
+![İletişim](./screenshots/contact.png)
 
 ---
 
@@ -202,3 +206,5 @@ Projeyi VS Code ile açın ve Live Server kullanarak çalıştırın.
 Bu proje eğitim ve bitirme projesi amacıyla geliştirilmiştir.
 
 Frontend tarafında hazır template yapıları kullanılmış ve proje ihtiyaçlarına göre özelleştirilmiştir.
+
+---
