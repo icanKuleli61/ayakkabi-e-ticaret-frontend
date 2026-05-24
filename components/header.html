@@ -525,6 +525,10 @@
 
     </script>
     <style>
+        #mobileMenu {
+            display: none;
+        }
+
         #profileDropdown a,
         #profileDropdown button {
 
@@ -590,6 +594,13 @@
         }
 
         @media only screen and (max-width:768px) {
+            #desktopMenu {
+                display: none;
+            }
+
+            #mobileMenu {
+                display: block;
+            }
 
             .header {
 
