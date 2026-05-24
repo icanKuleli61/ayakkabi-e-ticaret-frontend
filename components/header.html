@@ -30,7 +30,7 @@
 
             <div class="col-lg-7 col-md-7 col-12">
 
-                <nav class="header__menu mobile-menu" id="mobileMenu">
+                <nav class="header__menu" id="desktopMenu">
                     <ul>
 
                         <li id="menuHome">
@@ -108,7 +108,25 @@
 
 
         <div class="mobile-overlay" id="mobileOverlay"></div>
+        <nav id="mobileMenu">
 
+            <ul>
+
+                <li><a href="./index.html">Ana Sayfa</a></li>
+
+                <li><a href="./shop.html">Ürünler</a></li>
+
+                <li><a href="./shop.html?gender=women">Kadın</a></li>
+
+                <li><a href="./shop.html?gender=men">Erkek</a></li>
+
+                <li><a href="./shop.html?gender=kids">Çocuk</a></li>
+
+                <li><a href="./contact.html">İletişim</a></li>
+
+            </ul>
+
+        </nav>
         <div class="mobile-toggle" id="mobileToggle">
             <i class="fa fa-bars"></i>
         </div>
@@ -616,9 +634,9 @@
                 right: 0;
             }
 
-            #mobileMenu ul {
+            #mobileMenu.active ul {
 
-                display: flex !important;
+                display: flex;
 
                 flex-direction: column;
 
