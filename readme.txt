@@ -1,28 +1,67 @@
-# 👟 SneakerSepeti Frontend
+# 👟 SneakerSepeti - Frontend
 
-Modern ve mobil uyumlu ayakkabı e-ticaret frontend uygulaması.
-
-Bu proje HTML, CSS, JavaScript ve Bootstrap kullanılarak geliştirilmiştir.  
-Backend tarafında Laravel tabanlı RESTful API mimarisi kullanılmıştır.
+Modern, mobil uyumlu ve RESTful API destekli ayakkabı e-ticaret frontend uygulaması.
 
 ---
 
-# 🚀 Proje Özellikleri
+# 📌 Proje Hakkında
 
-- Responsive (Mobil Uyumlu) Tasarım
-- Kullanıcı Giriş & Kayıt Sistemi
-- JWT Authentication Entegrasyonu
-- Ürün Listeleme Sistemi
-- Ürün Detay Sayfası
-- Kategori Filtreleme
-- Favori Sistemi
-- Sepet Sistemi
-- Sipariş Sistemi
-- Profil Yönetimi
-- Adres Yönetimi
-- Sipariş Takip Sistemi
-- Dinamik Banner Sistemi
-- REST API Destekli Veri Çekme
+SneakerSepeti frontend sistemi; kullanıcıların ürünleri görüntüleyebildiği, favorilere ekleyebildiği, sepete ürün atabildiği ve sipariş işlemlerini gerçekleştirebildiği modern bir e-ticaret arayüzüdür.
+
+Bu proje HTML, CSS, JavaScript ve Bootstrap kullanılarak geliştirilmiştir.
+
+Backend tarafında Laravel RESTful API mimarisi kullanılmıştır.
+
+JWT Authentication sistemi ile güvenli kullanıcı işlemleri sağlanmıştır.
+
+---
+
+# 🚀 Özellikler
+
+## 👤 Kullanıcı Sistemi
+
+- Kullanıcı kayıt sistemi
+- Kullanıcı giriş sistemi
+- JWT Authentication
+- Profil yönetimi
+- Şifre değiştirme
+- Adres yönetimi
+
+---
+
+## 🛍 Ürün Sistemi
+
+- Ürün listeleme
+- Ürün detay sayfası
+- Kategori filtreleme
+- Responsive ürün tasarımı
+- Dinamik ürün verileri
+
+---
+
+## ❤️ Favori Sistemi
+
+- Favorilere ürün ekleme
+- Favorilerden ürün kaldırma
+- Dinamik favori kontrolü
+
+---
+
+## 🛒 Sepet Sistemi
+
+- Sepete ürün ekleme
+- Adet arttırma / azaltma
+- Sepetten ürün silme
+- Dinamik fiyat hesaplama
+
+---
+
+## 📦 Sipariş Sistemi
+
+- Sipariş oluşturma
+- Sipariş görüntüleme
+- Sipariş detay sayfası
+- Sipariş durum takibi
 
 ---
 
@@ -36,6 +75,8 @@ Backend tarafında Laravel tabanlı RESTful API mimarisi kullanılmıştır.
 - Bootstrap
 - jQuery
 - Owl Carousel
+
+---
 
 ## ⚙ Backend
 
@@ -53,6 +94,8 @@ Backend tarafında Laravel tabanlı RESTful API mimarisi kullanılmıştır.
 ## 🌐 Frontend
 
 https://ayakkabi-e-ticaret-frontend.onrender.com
+
+---
 
 ## 🔌 Backend API
 
@@ -97,7 +140,7 @@ frontend/
 
 ---
 
-## 🗂 ER Diagram
+## 🗂 ER Diagramı
 
 [📥 ER Diagramını Görüntüle](./docs/er-diagram.pdf)
 
@@ -208,3 +251,4 @@ Bu proje eğitim ve bitirme projesi amacıyla geliştirilmiştir.
 Frontend tarafında hazır template yapıları kullanılmış ve proje ihtiyaçlarına göre özelleştirilmiştir.
 
 ---
+https://github.com/icanKuleli61
