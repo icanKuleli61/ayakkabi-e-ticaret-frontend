@@ -251,4 +251,10 @@ Bu proje eğitim ve bitirme projesi amacıyla geliştirilmiştir.
 Frontend tarafında hazır template yapıları kullanılmış ve proje ihtiyaçlarına göre özelleştirilmiştir.
 
 ---
+
+# 👨‍💻 Geliştirici
+
+İlyas Kuleli
+
+GitHub:
 https://github.com/icanKuleli61
