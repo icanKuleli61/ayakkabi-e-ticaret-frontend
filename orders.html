@@ -668,8 +668,10 @@
                                     imagesHtml += `
 
                                         <img
-                                            src="https://shoe-ecommerce-api.onrender.com/storage/${image}"
-                                            style="
+src="${image.startsWith('http')
+                                            ? image
+                                            : 'https://shoe-ecommerce-api.onrender.com/storage/' + image
+                                        }"                                            style="
                                                 width:65px;
                                                 height:65px;
                                                 object-fit: contain;

@@ -514,7 +514,10 @@
                     <a href="./product-details.html?slug=${item.slug}&variant=${item.variant_id}">
 
                         <img
-                            src="${item.image}"
+                            src="${item.image.startsWith('http')
+                        ? item.image
+                        : 'https://shoe-ecommerce-api.onrender.com/storage/' + item.image
+                    }"
 
                             style="
                                 width:140px;
