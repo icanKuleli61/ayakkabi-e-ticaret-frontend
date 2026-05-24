@@ -28,7 +28,7 @@
 
             <!-- MENU -->
 
-            <div class="col-lg-7 col-md-7">
+            <div class="col-lg-7 col-md-7 col-12">
 
                 <nav class="header__menu mobile-menu">
 
@@ -80,7 +80,7 @@
 
             <!-- RIGHT -->
 
-            <div class="col-lg-2 col-md-2">
+            <div class="col-lg-2 col-md-2 col-12">
 
                 <div id="headerRight" style="
                     height:100%;
@@ -490,6 +490,34 @@
         #profileDropdown button {
 
             cursor: pointer;
+        }
+
+        @media only screen and (max-width:768px) {
+
+            .header__logo {
+
+                text-align: left;
+            }
+
+            .header__logo a {
+
+                font-size: 22px !important;
+            }
+
+            #headerRight {
+
+                justify-content: flex-start !important;
+
+                margin-top: 15px;
+            }
+
+            .canvas__open {
+
+                top: 20px !important;
+
+                right: 15px !important;
+            }
+
         }
     </style>
     </script>

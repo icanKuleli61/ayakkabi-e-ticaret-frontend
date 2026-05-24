@@ -72,6 +72,25 @@
 
         }
     </style>
+    <style>
+        @media only screen and (max-width:768px) {
+
+            .hero__items {
+
+                height: 220px !important;
+
+                background-size: cover !important;
+
+                background-position: center !important;
+            }
+
+            .product.spad {
+
+                margin-top: 40px !important;
+            }
+
+        }
+    </style>
 </head>
 
 <body>
@@ -549,7 +568,7 @@
                         background-image:
                         url('${banner.image}');
 
-                        height:520px;
+                        height:320px;
 
 background-size:contain;
 background-repeat:no-repeat;
@@ -901,6 +920,18 @@ background-color:#f5f5f5;
             }, 2500);
         }
         loadHeader();
+
+        setTimeout(() => {
+
+            $('.mobile-menu').slicknav({
+
+                prependTo: '#mobile-menu-wrap',
+
+                allowParentLinks: true
+
+            });
+
+        }, 300);
 
     </script>
     <div id="popup" style="
