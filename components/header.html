@@ -30,8 +30,7 @@
 
             <div class="col-lg-7 col-md-7 col-12">
 
-                <nav class="header__menu" id="mobileMenu">
-
+                <nav id="mobileMenu">
                     <ul>
 
                         <li id="menuHome">
@@ -463,35 +462,47 @@
         }
 
 
-
         updateHeader();
-        const mobileToggle =
 
-            document.getElementById("mobileToggle");
+        setTimeout(() => {
 
-        const mobileMenu =
+            const mobileToggle =
+                document.getElementById("mobileToggle");
 
-            document.getElementById("mobileMenu");
+            const mobileMenu =
+                document.getElementById("mobileMenu");
 
-        const mobileOverlay =
+            const mobileOverlay =
+                document.getElementById("mobileOverlay");
 
-            document.getElementById("mobileOverlay");
+            if (!mobileToggle || !mobileMenu || !mobileOverlay) {
 
-        mobileToggle.addEventListener("click", () => {
+                return;
+            }
 
-            mobileMenu.classList.toggle("active");
+            mobileToggle.addEventListener("click", () => {
 
-            mobileOverlay.classList.toggle("active");
+                mobileMenu.classList.toggle("active");
 
-        });
+                mobileOverlay.classList.toggle("active");
 
-        mobileOverlay.addEventListener("click", () => {
+                document.body.style.overflow =
+                    mobileMenu.classList.contains("active")
+                        ? "hidden"
+                        : "auto";
+            });
 
-            mobileMenu.classList.remove("active");
+            mobileOverlay.addEventListener("click", () => {
 
-            mobileOverlay.classList.remove("active");
+                mobileMenu.classList.remove("active");
 
-        });
+                mobileOverlay.classList.remove("active");
+
+                document.body.style.overflow = "auto";
+            });
+
+        }, 300);
+
         setActiveMenu();
 
     </script>
@@ -619,6 +630,30 @@
                 display: block;
             }
 
+            #mobileMenu ul {
+
+                list-style: none;
+
+                margin: 0;
+
+                padding: 0;
+            }
+
+            #mobileMenu ul li a {
+
+                display: block;
+
+                color: #111;
+
+                font-size: 18px;
+
+                font-weight: 700;
+
+                text-decoration: none;
+
+                padding: 12px 0;
+            }
+
             #headerRight {
 
                 margin-top: 15px;
@@ -626,9 +661,6 @@
                 justify-content: flex-start !important;
             }
 
-            .mobile-toggle i {
-                pointer-events: none;
-            }
         }
     </style>
 </header>
