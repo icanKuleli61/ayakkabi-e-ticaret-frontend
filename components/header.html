@@ -30,7 +30,7 @@
 
             <div class="col-lg-7 col-md-7 col-12">
 
-                <nav class="header__menu mobile-menu">
+                <nav class="header__menu" id="mobileMenu">
 
                     <ul>
 
@@ -108,11 +108,12 @@
 
 
 
-        <div class="canvas__open">
-
+        <div class="mobile-toggle" id="mobileToggle">
+            <div class="mobile-overlay" id="mobileOverlay"></div>
             <i class="fa fa-bars"></i>
 
         </div>
+
 
     </div>
 
@@ -464,7 +465,33 @@
 
 
         updateHeader();
+        const mobileToggle =
 
+            document.getElementById("mobileToggle");
+
+        const mobileMenu =
+
+            document.getElementById("mobileMenu");
+
+        const mobileOverlay =
+
+            document.getElementById("mobileOverlay");
+
+        mobileToggle.addEventListener("click", () => {
+
+            mobileMenu.classList.toggle("active");
+
+            mobileOverlay.classList.toggle("active");
+
+        });
+
+        mobileOverlay.addEventListener("click", () => {
+
+            mobileMenu.classList.remove("active");
+
+            mobileOverlay.classList.remove("active");
+
+        });
         setActiveMenu();
 
     </script>
@@ -492,30 +519,105 @@
             cursor: pointer;
         }
 
+        .mobile-toggle {
+
+            display: none;
+
+            position: absolute;
+
+            top: 25px;
+
+            right: 20px;
+
+            font-size: 28px;
+
+            z-index: 100001;
+
+            cursor: pointer;
+        }
+
+        .mobile-overlay {
+
+            position: fixed;
+
+            inset: 0;
+
+            background: rgba(0, 0, 0, 0.4);
+
+            z-index: 99998;
+
+            display: none;
+        }
+
+        .mobile-overlay.active {
+
+            display: block;
+        }
+
         @media only screen and (max-width:768px) {
 
-            .header__logo {
+            .header {
 
-                text-align: left;
+                position: relative;
+
+                padding: 15px 0;
+            }
+
+            .mobile-toggle {
+
+                display: block;
             }
 
             .header__logo a {
 
-                font-size: 22px !important;
+                font-size: 26px !important;
+            }
+
+            #mobileMenu {
+
+                position: fixed;
+
+                top: 0;
+
+                right: -100%;
+
+                width: 260px;
+
+                height: 100vh;
+
+                background: white;
+
+                z-index: 99999;
+
+                transition: 0.4s;
+
+                padding: 80px 25px;
+            }
+
+            #mobileMenu.active {
+
+                right: 0;
+            }
+
+            #mobileMenu ul {
+
+                display: flex !important;
+
+                flex-direction: column;
+
+                gap: 20px;
+            }
+
+            #mobileMenu ul li {
+
+                display: block;
             }
 
             #headerRight {
 
-                justify-content: flex-start !important;
-
                 margin-top: 15px;
-            }
 
-            .canvas__open {
-
-                top: 20px !important;
-
-                right: 15px !important;
+                justify-content: flex-start !important;
             }
 
         }
