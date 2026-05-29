@@ -254,7 +254,7 @@ Frontend tarafında hazır template yapıları kullanılmış ve proje ihtiyaçl
 
 # 👨‍💻 Geliştirici
 
-İlyas Kuleli
+İlyas can YARIMKOL
 
 GitHub:
 https://github.com/icanKuleli61
